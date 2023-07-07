@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="1_kritv"]
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_yo7jp"]
-[ext_resource type="Texture2D" uid="uid://x0fybxoc4ryf" path="res://icon.svg" id="2_oi0nf"]
+[ext_resource type="Texture2D" uid="uid://bn7m6cnvlexvu" path="res://Assets/Enemy/Enemy_A.png" id="3_o5mcp"]
 [ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://enemy/attack_enemy.tscn" id="4_xb3t8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqael"]
-radius = 70.0
-height = 176.0
+radius = 36.0
+height = 148.0
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 2
@@ -18,9 +18,12 @@ script = ExtResource("1_yo7jp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.439216, 0.368627, 1)
-texture = ExtResource("2_oi0nf")
+position = Vector2(0, -36)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_o5mcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -11)
 shape = SubResource("CapsuleShape2D_gqael")
 
 [node name="AttackEnemy" parent="." instance=ExtResource("4_xb3t8")]
