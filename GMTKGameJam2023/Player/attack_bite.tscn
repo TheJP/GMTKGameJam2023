@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://upcke8g143as"]
+
+[ext_resource type="PackedScene" uid="uid://bth2rc3mioa1y" path="res://entity/attack.tscn" id="1_glroy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tl7gt"]
+radius = 150.0
+
+[node name="Attack" instance=ExtResource("1_glroy")]
+attack_enemy = true
+damage = 20
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_tl7gt")
+
+[node name="Timer" parent="." index="1"]
+wait_time = 2.0
