@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cspb3vj40bncf"]
+
+[ext_resource type="Texture2D" uid="uid://7ej5bmy4mr2m" path="res://DowngradeSystem/Card.png" id="1_hk08n"]
+[ext_resource type="Script" path="res://DowngradeSystem/DowngradeCard.gd" id="2_enrp3"]
+
+[node name="Downgrade" type="NinePatchRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 136.0
+offset_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 0
+texture = ExtResource("1_hk08n")
+patch_margin_left = 45
+patch_margin_top = 45
+patch_margin_right = 45
+patch_margin_bottom = 45
+script = ExtResource("2_enrp3")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
