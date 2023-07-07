@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://j08p20qy4uir"]
+[gd_scene load_steps=7 format=3 uid="uid://dacjlbk3ddu34"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_jrwj3"]
 [ext_resource type="Texture2D" uid="uid://x0fybxoc4ryf" path="res://icon.svg" id="2_133ny"]
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="2_x3ypg"]
-[ext_resource type="PackedScene" path="res://entity/attack.tscn" id="4_2165k"]
+[ext_resource type="PackedScene" uid="uid://bqqvai0ajoxyv" path="res://player/attack_claws.tscn" id="4_p2yk0"]
+[ext_resource type="PackedScene" uid="uid://upcke8g143as" path="res://player/attack_bite.tscn" id="5_2ynw7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bn526"]
 radius = 64.0
@@ -22,5 +23,6 @@ texture = ExtResource("2_133ny")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_bn526")
 
-[node name="AttackClaws" parent="." instance=ExtResource("4_2165k")]
-attack_enemy = true
+[node name="AttackClaws" parent="." instance=ExtResource("4_p2yk0")]
+
+[node name="AttackBite" parent="." instance=ExtResource("5_2ynw7")]

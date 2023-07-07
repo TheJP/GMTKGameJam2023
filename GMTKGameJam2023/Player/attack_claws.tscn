@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqqvai0ajoxyv"]
+
+[ext_resource type="PackedScene" uid="uid://bth2rc3mioa1y" path="res://entity/attack.tscn" id="1_46hf0"]
+
+[node name="Attack" instance=ExtResource("1_46hf0")]
+attack_enemy = true
+is_aoe = true
+
+[node name="Timer" parent="." index="1"]
+wait_time = 1.5
