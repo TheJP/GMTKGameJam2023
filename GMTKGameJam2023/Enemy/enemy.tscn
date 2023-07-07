@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dugyay08um7n5"]
+[gd_scene load_steps=6 format=3 uid="uid://dugyay08um7n5"]
 
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="1_kritv"]
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_yo7jp"]
 [ext_resource type="Texture2D" uid="uid://x0fybxoc4ryf" path="res://icon.svg" id="2_oi0nf"]
+[ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://enemy/attack_enemy.tscn" id="4_xb3t8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqael"]
 radius = 70.0
@@ -21,3 +22,5 @@ texture = ExtResource("2_oi0nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_gqael")
+
+[node name="AttackEnemy" parent="." instance=ExtResource("4_xb3t8")]
