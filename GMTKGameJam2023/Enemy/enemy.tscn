@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dugyay08um7n5"]
+
+[ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="1_kritv"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_yo7jp"]
+[ext_resource type="Texture2D" uid="uid://x0fybxoc4ryf" path="res://icon.svg" id="2_oi0nf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqael"]
+radius = 70.0
+height = 176.0
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_yo7jp")
+
+[node name="Entity" parent="." instance=ExtResource("1_kritv")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.439216, 0.368627, 1)
+texture = ExtResource("2_oi0nf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gqael")

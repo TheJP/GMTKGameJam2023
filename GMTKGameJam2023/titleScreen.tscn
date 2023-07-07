@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4pcbslkckvyv"]
+
+[ext_resource type="Script" path="res://UIElements/titleScreen.gd" id="1_wecwy"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wecwy")
+
+[node name="UI Box" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UI Box"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI Box/CenterContainer"]
+layout_mode = 2
+
+[node name="Start Game Button" type="Button" parent="UI Box/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Start Game"
+
+[node name="Quit Button" type="Button" parent="UI Box/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Quit"
+
+[node name="BG" type="TextureRect" parent="UI Box"]
+layout_mode = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="UI Box/CenterContainer/VBoxContainer/Start Game Button" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="UI Box/CenterContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
