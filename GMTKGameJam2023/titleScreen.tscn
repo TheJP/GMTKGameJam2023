@@ -1,9 +1,197 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4pcbslkckvyv"]
+[gd_scene load_steps=14 format=3 uid="uid://c4pcbslkckvyv"]
 
 [ext_resource type="Script" path="res://UIElements/titleScreen.gd" id="1_wecwy"]
 [ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="2_643i1"]
 [ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="3_m8m44"]
+[ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="4_6tx0o"]
 [ext_resource type="Texture2D" uid="uid://yvcwa8q18ftf" path="res://Assets/Background.png" id="4_a3fhw"]
+[ext_resource type="Texture2D" uid="uid://csj60sh8eqk5y" path="res://Assets/Player/Character 3.png" id="6_l71vm"]
+[ext_resource type="Texture2D" uid="uid://c7he3ahhsqphp" path="res://Assets/Player/Character 1.png" id="6_siylu"]
+[ext_resource type="Texture2D" uid="uid://8pixapcbc44" path="res://Assets/Particles/particle_1.png" id="8_uwnok"]
+[ext_resource type="Texture2D" uid="uid://70c8a4g153f0" path="res://Assets/Particles/particle_2.png" id="9_jy6v6"]
+[ext_resource type="Texture2D" uid="uid://cjc653ohvqmj2" path="res://Assets/Particles/particle_5.png" id="10_xctby"]
+
+[sub_resource type="Animation" id="Animation_vyoe8"]
+resource_name = "background_changing"
+length = 9.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI Box/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5, 3.7, 3.8, 4.1, 8.5, 8.8, 8.9, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI Box/CenterContainer/MarginContainer2/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 3.7, 3.8, 4.1, 8.5, 8.8, 8.9, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0.683594, 0.144531, 0.144531, 1), Color(0.992157, 0.788235, 0.760784, 1), Color(0.683594, 0.144531, 0.144531, 1), Color(0.992157, 0.788235, 0.760784, 1), Color(0.683594, 0.144531, 0.144531, 1), Color(0.992157, 0.788235, 0.760784, 1), Color(0.683594, 0.144531, 0.144531, 1), Color(0.992157, 0.788235, 0.760784, 1), Color(0.683594, 0.144531, 0.144531, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI Box/CenterContainer/MarginContainer2/Label:theme_override_colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5, 3.7, 3.8, 4.1, 8.5, 8.8, 8.9, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(0.521569, 0.521569, 0.521569, 1), Color(0, 0, 0, 1), Color(0.521569, 0.521569, 0.521569, 1), Color(0, 0, 0, 1), Color(0.521569, 0.521569, 0.521569, 1), Color(0, 0, 0, 1), Color(0.521569, 0.521569, 0.521569, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI Box/Wolfie:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.9, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.682353), Color(1, 1, 1, 0.682353), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI Box/Wolfie:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(180, 1013), Vector2(500, 1013)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI Box/Baby:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.8, 4.4, 7.7, 8.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.682353), Color(1, 1, 1, 0.682353), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("UI Box/Baby:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.8, 8.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1500, 1120), Vector2(1900, 1120)]
+}
+
+[sub_resource type="Animation" id="Animation_mggqa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI Box/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI Box/CenterContainer/MarginContainer2/Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.683594, 0.144531, 0.144531, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI Box/CenterContainer/MarginContainer2/Label:theme_override_colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI Box/Wolfie:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI Box/Wolfie:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(180, 1013)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI Box/Baby:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("UI Box/Baby:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1801, 1120)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_it72x"]
+_data = {
+"RESET": SubResource("Animation_mggqa"),
+"background_changing": SubResource("Animation_vyoe8")
+}
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -27,15 +215,17 @@ layout_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="UI Box/CenterContainer"]
 layout_mode = 2
-theme_override_constants/margin_bottom = 170
+theme_override_constants/margin_bottom = 415
 
 [node name="Label" type="Label" parent="UI Box/CenterContainer/MarginContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.6875, 0.144531, 0.144531, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.683594, 0.144531, 0.144531, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 50
 theme_override_fonts/font = ExtResource("2_643i1")
-theme_override_font_sizes/font_size = 106
+theme_override_font_sizes/font_size = 176
 text = "Wolf Goes Boohoo"
 horizontal_alignment = 1
 
@@ -45,34 +235,84 @@ layout_mode = 2
 [node name="MarginContainer" type="MarginContainer" parent="UI Box/CenterContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/margin_top = 200
+theme_override_constants/margin_top = 460
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI Box/CenterContainer/VBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 
 [node name="Start Game Button" type="Button" parent="UI Box/CenterContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.686275, 0.145098, 0.145098, 1)
 theme_override_colors/font_pressed_color = Color(0.686275, 0.145098, 0.145098, 1)
-theme_override_colors/font_hover_color = Color(0.0666667, 0.0823529, 0.0705882, 1)
+theme_override_colors/font_hover_color = Color(0.671875, 0.671875, 0.671875, 1)
 theme_override_fonts/font = ExtResource("3_m8m44")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 125
+keep_pressed_outside = true
 text = "Start Game"
 
 [node name="Quit Button" type="Button" parent="UI Box/CenterContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_m8m44")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
+[node name="BG2" type="TextureRect" parent="UI Box"]
+z_index = -3
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_6tx0o")
+
 [node name="BG" type="TextureRect" parent="UI Box"]
 z_index = -3
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("4_a3fhw")
+
+[node name="Background Animation" type="AnimationPlayer" parent="UI Box"]
+root_node = NodePath("../..")
+autoplay = "background_changing"
+libraries = {
+"": SubResource("AnimationLibrary_it72x")
+}
+
+[node name="Wolfie" type="Sprite2D" parent="UI Box"]
+position = Vector2(180, 1013)
+scale = Vector2(0.458891, 0.458891)
+texture = ExtResource("6_l71vm")
+
+[node name="Baby" type="Sprite2D" parent="UI Box"]
+position = Vector2(1801, 1120)
+scale = Vector2(0.527221, 0.527221)
+texture = ExtResource("6_siylu")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI Box"]
+position = Vector2(255, 600)
+rotation = 1.50438
+scale = Vector2(0.89, 0.89)
+texture = ExtResource("8_uwnok")
+
+[node name="Sprite2D2" type="Sprite2D" parent="UI Box"]
+position = Vector2(280, 670)
+rotation = 1.50438
+scale = Vector2(0.89, 0.89)
+texture = ExtResource("9_jy6v6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="UI Box"]
+position = Vector2(1787, 492)
+rotation = 1.50438
+scale = Vector2(0.89, 0.89)
+texture = ExtResource("10_xctby")
+
+[node name="Sprite2D4" type="Sprite2D" parent="UI Box"]
+position = Vector2(1838, 522)
+rotation = 3.59828
+scale = Vector2(0.89, 0.89)
+texture = ExtResource("8_uwnok")
 
 [connection signal="pressed" from="UI Box/CenterContainer/VBoxContainer/MarginContainer/VBoxContainer/Start Game Button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="UI Box/CenterContainer/VBoxContainer/MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
