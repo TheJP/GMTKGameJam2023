@@ -7,3 +7,6 @@ func change_health(new_health: int, max_health: int):
 func change_time(new_time: float, max_time: float):
 	%TimeBar.max_value = max_time
 	%TimeBar.value = new_time
+
+func _process(_delta):
+	%ScoreText.text = ("Score: %.1f" % GameState.score)
