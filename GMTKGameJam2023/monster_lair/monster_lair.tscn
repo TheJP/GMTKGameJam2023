@@ -34,11 +34,13 @@ debug_color = Color(0, 0.647059, 0.219608, 0.419608)
 process_mode = 3
 title = "Enter Lair?!"
 initial_position = 2
-size = Vector2i(805, 121)
+size = Vector2i(829, 289)
 unresizable = true
 always_on_top = true
 theme = ExtResource("2_beufi")
-dialog_text = "Do you wanna enter the lair to rest and end the game?"
+ok_button_text = " Yes: End Game "
+dialog_text = "Do you wanna enter the lair
+to rest and end the game?"
 
 [connection signal="body_entered" from="EntryArea2D" to="." method="_on_entry_area_2d_body_entered"]
 [connection signal="canceled" from="AcceptDialog" to="." method="_on_accept_dialog_canceled"]

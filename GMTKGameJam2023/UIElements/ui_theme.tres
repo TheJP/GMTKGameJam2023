@@ -1,4 +1,24 @@
-[gd_resource type="Theme" format=3 uid="uid://cyiqrtd5vtqcq"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cyiqrtd5vtqcq"]
+
+[ext_resource type="FontFile" uid="uid://b6ivishkxit4u" path="res://Assets/FrederickatheGreat-Regular.ttf" id="1_tiu2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_276fo"]
+content_margin_left = 100.0
+content_margin_top = 100.0
+content_margin_right = 100.0
+content_margin_bottom = 100.0
+bg_color = Color(0.25, 0.25, 0.25, 1)
+expand_margin_left = 30.0
+expand_margin_top = 80.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
 
 [resource]
-default_font_size = 30
+default_font_size = 60
+Window/constants/close_h_offset = 32
+Window/constants/close_v_offset = 40
+Window/constants/title_height = 60
+Window/fonts/title_font = ExtResource("1_tiu2r")
+Window/styles/embedded_border = SubResource("StyleBoxFlat_276fo")
