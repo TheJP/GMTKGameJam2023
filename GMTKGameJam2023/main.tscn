@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=8 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://player/player.tscn" id="1_yi55a"]
 [ext_resource type="PackedScene" uid="uid://dugyay08um7n5" path="res://enemy/enemy.tscn" id="2_lexij"]
+[ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="3_n02ux"]
 [ext_resource type="Script" path="res://DowngradeTimer.gd" id="3_ybr87"]
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
@@ -9,40 +10,55 @@
 
 [node name="Game" type="Node"]
 
-[node name="Player" parent="." instance=ExtResource("1_yi55a")]
+[node name="BackgroundCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="BackgroundCanvasLayer"]
+texture_repeat = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_n02ux")
+region_enabled = true
+region_rect = Rect2(0, 0, 100000, 100000)
+
+[node name="GameCanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Player" parent="GameCanvasLayer" instance=ExtResource("1_yi55a")]
 position = Vector2(252, 178)
 
-[node name="DowngradeTimer" type="RichTextLabel" parent="."]
+[node name="Buildings" type="Node" parent="GameCanvasLayer"]
+
+[node name="MonsterLair" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_1ax52")]
+position = Vector2(1619, 833)
+
+[node name="EnemyHouse" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
+position = Vector2(839, 829)
+
+[node name="EnemyHouse2" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
+position = Vector2(1267, 294)
+
+[node name="Enemies" type="Node" parent="GameCanvasLayer"]
+
+[node name="Enemy" parent="GameCanvasLayer/Enemies" instance=ExtResource("2_lexij")]
+position = Vector2(627, 369)
+
+[node name="UICanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="DowngradeTimer" type="RichTextLabel" parent="UICanvasLayer"]
 offset_left = 888.0
 offset_right = 928.0
 offset_bottom = 40.0
 script = ExtResource("3_ybr87")
 
-[node name="Timer" type="Timer" parent="DowngradeTimer"]
+[node name="Timer" type="Timer" parent="UICanvasLayer/DowngradeTimer"]
 autostart = true
 
-[node name="Downgrades" parent="." instance=ExtResource("4_odlv1")]
+[node name="Downgrades" parent="UICanvasLayer" instance=ExtResource("4_odlv1")]
 offset_left = 416.0
 offset_top = 32.0
 offset_right = 416.0
 offset_bottom = 32.0
 
-[node name="Buildings" type="Node" parent="."]
-
-[node name="MonsterLair" parent="Buildings" instance=ExtResource("5_1ax52")]
-position = Vector2(1619, 833)
-
-[node name="EnemyHouse" parent="Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(839, 829)
-
-[node name="EnemyHouse2" parent="Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(1267, 294)
-
-[node name="Enemies" type="Node" parent="."]
-
-[node name="Enemy" parent="Enemies" instance=ExtResource("2_lexij")]
-position = Vector2(627, 369)
-
-[connection signal="start_downgrade_selection" from="DowngradeTimer" to="Downgrades" method="_on_downgrade_timer_start_downgrade_selection"]
-[connection signal="timeout" from="DowngradeTimer/Timer" to="DowngradeTimer" method="_on_timer_timeout"]
-[connection signal="downgrade_selection_finished" from="Downgrades" to="DowngradeTimer" method="_on_downgrades_downgrade_selection_finished"]
+[connection signal="start_downgrade_selection" from="UICanvasLayer/DowngradeTimer" to="UICanvasLayer/Downgrades" method="_on_downgrade_timer_start_downgrade_selection"]
+[connection signal="timeout" from="UICanvasLayer/DowngradeTimer/Timer" to="UICanvasLayer/DowngradeTimer" method="_on_timer_timeout"]
+[connection signal="downgrade_selection_finished" from="UICanvasLayer/Downgrades" to="UICanvasLayer/DowngradeTimer" method="_on_downgrades_downgrade_selection_finished"]
