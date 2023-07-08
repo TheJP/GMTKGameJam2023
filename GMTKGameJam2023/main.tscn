@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
-[ext_resource type="Script" path="res://DowngradeSystem/DowngradeTimer.gd" id="6_55w2e"]
+[ext_resource type="PackedScene" uid="uid://uj2b1uonlnlu" path="res://UIElements/game_ui.tscn" id="8_33vkx"]
 
 [node name="Game" type="Node"]
 
@@ -54,22 +54,23 @@ player = NodePath("../../Player")
 
 [node name="Corpses" type="Node" parent="GameCanvasLayer"]
 
-[node name="UICanvasLayer" type="CanvasLayer" parent="."]
+[node name="HUDCanvasLayer" type="CanvasLayer" parent="."]
 layer = 3
 
-[node name="DowngradeTimer" type="RichTextLabel" parent="UICanvasLayer"]
-offset_left = 888.0
-offset_right = 928.0
-offset_bottom = 40.0
-script = ExtResource("6_55w2e")
+[node name="GameUI" parent="HUDCanvasLayer" instance=ExtResource("8_33vkx")]
+unique_name_in_owner = true
 
-[node name="Timer" type="Timer" parent="UICanvasLayer/DowngradeTimer"]
-autostart = true
+[node name="UICanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
 
 [node name="Downgrades" parent="UICanvasLayer" instance=ExtResource("4_odlv1")]
 
-[connection signal="start_downgrade_selection" from="UICanvasLayer/DowngradeTimer" to="UICanvasLayer/Downgrades" method="_on_downgrade_timer_start_downgrade_selection"]
-[connection signal="timeout" from="UICanvasLayer/DowngradeTimer/Timer" to="UICanvasLayer/DowngradeTimer" method="_on_timer_timeout"]
-[connection signal="downgrade_selection_finished" from="UICanvasLayer/Downgrades" to="UICanvasLayer/DowngradeTimer" method="_on_downgrades_downgrade_selection_finished"]
+[node name="Timer" type="Timer" parent="UICanvasLayer/Downgrades"]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[connection signal="downgrade_selection_finished" from="UICanvasLayer/Downgrades" to="UICanvasLayer/Downgrades/Timer" method="_on_downgrades_downgrade_selection_finished"]
+[connection signal="timeout" from="UICanvasLayer/Downgrades/Timer" to="UICanvasLayer/Downgrades" method="_on_timer_timeout"]
 
 [editable path="UICanvasLayer/Downgrades"]
