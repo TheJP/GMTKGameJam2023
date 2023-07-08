@@ -16,6 +16,6 @@ func _on_downgrade_selected():
 func _on_downgrade_timer_start_downgrade_selection():
 	visible = true
 	for i in range(3):
-		var card = preload("res://DowngradeSystem/DowngradeCard.tscn").instantiate()
+		var card = preload("res://DowngradeSystem/Cards/ReduceMovementSpeed.tscn").instantiate()
 		card.connect("downgrade_selected", Callable(self, "_on_downgrade_selected"))
 		$DowngradesContainer.add_child(card)
