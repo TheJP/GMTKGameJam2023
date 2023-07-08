@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 TransitionScreen="*res://Effects/TransitionScreen.tscn"
 PlayerStats="*res://PlayerStats.gd"
-<<<<<<<HEADPlayerStats="*res://PlayerStats.gd"
 ClawAnimation="*res://Player/claw_animation.gd"
+<<<<<<<HEADPlayerStats="*res://PlayerStats.gd"
 
 [display]
 
