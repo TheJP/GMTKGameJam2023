@@ -26,7 +26,7 @@ z_index = 5
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_dyhx0")
 autoplay = "default"
-frame_progress = 0.296366
+frame_progress = 0.324321
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.9
