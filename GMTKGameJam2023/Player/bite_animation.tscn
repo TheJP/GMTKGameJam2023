@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://v380onvs5sbe"]
 
-[ext_resource type="Texture2D" uid="uid://w7b773bdlnws" path="res://Assets/Player/Bite 1.png" id="1_b48kj"]
-[ext_resource type="Script" path="res://player/bite_animation.gd" id="1_swc7b"]
-[ext_resource type="Texture2D" uid="uid://du4ipykq4gyix" path="res://Assets/Player/Bite 2.png" id="2_k0son"]
+[ext_resource type="Script" path="res://Player/bite_animation.gd" id="1_khsgd"]
+[ext_resource type="Texture2D" uid="uid://w7b773bdlnws" path="res://Assets/Player/Bite 1.png" id="2_7r3ci"]
+[ext_resource type="Texture2D" uid="uid://du4ipykq4gyix" path="res://Assets/Player/Bite 2.png" id="3_edd8q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dyhx0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b48kj")
+"texture": ExtResource("2_7r3ci")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_k0son")
+"texture": ExtResource("3_edd8q")
 }],
 "loop": true,
 "name": &"default",
@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [node name="BiteAnimation" type="Node2D"]
-script = ExtResource("1_swc7b")
+script = ExtResource("1_khsgd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
