@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwiyn7b564aub"]
+
+[ext_resource type="PackedScene" uid="uid://cspb3vj40bncf" path="res://DowngradeSystem/DowngradeCard.tscn" id="1_7gyn2"]
+[ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceBiteDamage.gd" id="2_ha60n"]
+
+[node name="Downgrade" instance=ExtResource("1_7gyn2")]
+
+[node name="Effect" parent="." index="0"]
+script = ExtResource("2_ha60n")
+
+[node name="Label" parent="MarginContainer" index="0"]
+text = "Reduce Bite Damage by 1"

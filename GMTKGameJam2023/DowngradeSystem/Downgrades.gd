@@ -4,7 +4,12 @@ var num_downgrades = 0
 
 var cards = [
 	preload("res://DowngradeSystem/Cards/ReduceMovementSpeed.tscn"),
-	preload("res://DowngradeSystem/Cards/ReduceClawDamage.tscn")
+	preload("res://DowngradeSystem/Cards/ReduceClawDamage.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceClawSpeed.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceBiteDamage.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceBiteSpeed.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceBiteRange.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceClawRange.tscn"),
 ]
 
 var halfSprite = preload("res://Assets/Player/Character 2.png")
