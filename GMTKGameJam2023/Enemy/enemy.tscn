@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dugyay08um7n5"]
+[gd_scene load_steps=7 format=3 uid="uid://dugyay08um7n5"]
 
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="1_kritv"]
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_yo7jp"]
 [ext_resource type="Texture2D" uid="uid://bn7m6cnvlexvu" path="res://Assets/Enemy/Enemy_A.png" id="3_o5mcp"]
-[ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://enemy/attack_enemy.tscn" id="4_xb3t8"]
+[ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://Enemy/attack_enemy.tscn" id="4_xb3t8"]
+[ext_resource type="Script" path="res://Enemy/spawn_corpse.gd" id="5_16jdd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqael"]
 radius = 36.0
@@ -27,3 +28,9 @@ position = Vector2(-1, -11)
 shape = SubResource("CapsuleShape2D_gqael")
 
 [node name="AttackEnemy" parent="." instance=ExtResource("4_xb3t8")]
+
+[node name="DeathBehaviour" type="Node" parent="."]
+script = ExtResource("5_16jdd")
+corpse_texture = ExtResource("3_o5mcp")
+
+[connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]
