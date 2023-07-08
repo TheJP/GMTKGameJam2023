@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://nyar4j337v8u"]
+
+[ext_resource type="Texture2D" uid="uid://bn7m6cnvlexvu" path="res://Assets/Enemy/Enemy_A.png" id="1_vn68c"]
+
+[node name="EnemyCorpse" type="Sprite2D"]
+z_index = -5
+rotation = 1.5708
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_vn68c")
