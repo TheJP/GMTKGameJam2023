@@ -13,6 +13,8 @@ height = 148.0
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 2
 collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_uefpo")
 
 [node name="Entity" parent="." instance=ExtResource("2_dj0ys")]
@@ -33,4 +35,9 @@ shape = SubResource("CapsuleShape2D_gqael")
 script = ExtResource("5_ku71t")
 corpse_texture = ExtResource("3_63ahh")
 
+[node name="DirectionTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
