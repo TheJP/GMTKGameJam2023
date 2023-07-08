@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=7 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://Player/player.tscn" id="1_yi55a"]
-[ext_resource type="PackedScene" uid="uid://dugyay08um7n5" path="res://Enemy/enemy.tscn" id="2_lexij"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="3_n02ux"]
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
@@ -38,19 +37,19 @@ position = Vector2(839, 829)
 [node name="EnemyHouse2" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
 position = Vector2(1267, 294)
 
+[node name="EnemyHouse3" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
+position = Vector2(1572, -447)
+
+[node name="EnemyHouse4" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
+position = Vector2(582, -520)
+
+[node name="EnemyHouse5" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
+position = Vector2(-399, -505)
+
+[node name="EnemyHouse6" parent="GameCanvasLayer/Buildings" instance=ExtResource("5_d3thm")]
+position = Vector2(-333, 1005)
+
 [node name="Enemies" type="Node" parent="GameCanvasLayer"]
-
-[node name="Enemy2" parent="GameCanvasLayer/Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_lexij")]
-position = Vector2(1393, 624)
-player = NodePath("../../Player")
-
-[node name="Enemy" parent="GameCanvasLayer/Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_lexij")]
-position = Vector2(958, 490)
-player = NodePath("../../Player")
-
-[node name="Enemy3" parent="GameCanvasLayer/Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_lexij")]
-position = Vector2(531, 512)
-player = NodePath("../../Player")
 
 [node name="Corpses" type="Node" parent="GameCanvasLayer"]
 

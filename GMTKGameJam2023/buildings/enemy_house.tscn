@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtu8lvf1koj2h"]
+[gd_scene load_steps=7 format=3 uid="uid://dtu8lvf1koj2h"]
 
 [ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_6qbcd"]
 [ext_resource type="Texture2D" uid="uid://c1qiy258wyoj2" path="res://Assets/Buildings/Enemy_House 2.png" id="2_qwsvr"]
+[ext_resource type="Script" path="res://buildings/EnemySpawner.gd" id="3_65bvr"]
+[ext_resource type="PackedScene" uid="uid://dugyay08um7n5" path="res://Enemy/enemy.tscn" id="4_pyr8o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdjwn"]
 animations = [{
@@ -32,3 +34,14 @@ frame_progress = 0.624472
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 32)
 shape = SubResource("CapsuleShape2D_dgoll")
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+position = Vector2(0, 264)
+script = ExtResource("3_65bvr")
+enemy = ExtResource("4_pyr8o")
+
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_spawn_timer_timeout"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://c4pcbslkckvyv"]
 
 [ext_resource type="Script" path="res://UIElements/titleScreen.gd" id="1_wecwy"]
-[ext_resource type="FontFile" uid="uid://b6ivishkxit4u" path="res://Assets/FrederickatheGreat-Regular.ttf" id="2_643i1"]
-[ext_resource type="FontFile" uid="uid://dlc75aa3kulfl" path="res://Assets/NanumPenScript-Regular.ttf" id="3_m8m44"]
+[ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="2_643i1"]
+[ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="3_m8m44"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="4_6tx0o"]
 [ext_resource type="Texture2D" uid="uid://yvcwa8q18ftf" path="res://Assets/Background.png" id="4_a3fhw"]
 [ext_resource type="Texture2D" uid="uid://csj60sh8eqk5y" path="res://Assets/Player/Character 3.png" id="6_l71vm"]
