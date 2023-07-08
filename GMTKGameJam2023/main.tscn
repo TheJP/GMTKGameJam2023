@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=10 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://Player/player.tscn" id="1_yi55a"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="3_n02ux"]
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
+[ext_resource type="PackedScene" uid="uid://budb2o2mjur23" path="res://buildings/rock.tscn" id="5_dxae0"]
 [ext_resource type="PackedScene" uid="uid://cqusg6kdpbn7f" path="res://Tree/Tree.tscn" id="5_vrgku"]
 [ext_resource type="PackedScene" uid="uid://uj2b1uonlnlu" path="res://UIElements/game_ui.tscn" id="8_33vkx"]
 
@@ -37,7 +38,7 @@ position = Vector2(252, 178)
 y_sort_enabled = true
 
 [node name="MonsterLair" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_1ax52")]
-position = Vector2(2737, 2224)
+position = Vector2(3088, 2276)
 
 [node name="EnemyHouse" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
 position = Vector2(839, 829)
@@ -46,10 +47,10 @@ position = Vector2(839, 829)
 position = Vector2(-372, 245)
 
 [node name="EnemyHouse3" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(1648, -734)
+position = Vector2(1643, -717)
 
 [node name="EnemyHouse4" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(539, -935)
+position = Vector2(1510, -813)
 
 [node name="EnemyHouse5" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
 position = Vector2(-904, -354)
@@ -104,7 +105,7 @@ y_sort_enabled = true
 
 [node name="TreeGroup" type="Node2D" parent="GameCanvasLayer/YSortNode/Obstacles"]
 y_sort_enabled = true
-position = Vector2(1096, -642)
+position = Vector2(1092, -642)
 
 [node name="Tree" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup" instance=ExtResource("5_vrgku")]
 position = Vector2(139, -2350)
@@ -452,6 +453,27 @@ position = Vector2(3550, 5521)
 
 [node name="Tree" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(139, -2350)
+
+[node name="Tree10" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-118, -3059)
+
+[node name="Tree11" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-319, -3446)
+
+[node name="Tree13" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-14, -3346)
+
+[node name="Tree14" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(203, -3660)
+
+[node name="Tree12" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-624, -3333)
+
+[node name="Tree15" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-861, -3158)
+
+[node name="Tree16" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-915, -3407)
 
 [node name="Tree2" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(312, -2177)
@@ -897,6 +919,105 @@ position = Vector2(1038, -2334)
 
 [node name="Tree9" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup25" instance=ExtResource("5_vrgku")]
 position = Vector2(558, -2305)
+
+[node name="Rocks" type="Node2D" parent="GameCanvasLayer/YSortNode"]
+y_sort_enabled = true
+
+[node name="Rock" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-91, -174)
+
+[node name="Rock2" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(2074, -65)
+
+[node name="Rock3" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(1633, -861)
+
+[node name="Rock4" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-789, -881)
+
+[node name="Rock5" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-2145, 266)
+
+[node name="Rock19" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-3174, 664)
+
+[node name="Rock20" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-3851, -111)
+
+[node name="Rock21" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-1866, -2528)
+
+[node name="Rock22" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(636, -3400)
+
+[node name="Rock23" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(3824, -1626)
+
+[node name="Rock24" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(4108, -762)
+
+[node name="Rock25" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(4819, -944)
+
+[node name="Rock26" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(4971, 1003)
+
+[node name="Rock27" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(3841, 2159)
+
+[node name="Rock28" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(3659, 9)
+
+[node name="Rock29" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-2737, 2532)
+
+[node name="Rock30" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(5137, 1131)
+
+[node name="Rock31" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(5255, 1017)
+
+[node name="Rock32" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(4781, 1855)
+
+[node name="Rock6" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-416, 1664)
+
+[node name="Rock7" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-1648, 1345)
+
+[node name="Rock8" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-577, -952)
+
+[node name="Rock9" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-921, -972)
+
+[node name="Rock10" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-1472, -1963)
+
+[node name="Rock11" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(2276, -2023)
+
+[node name="Rock12" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(3123, 1321)
+
+[node name="Rock13" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(1557, 917)
+
+[node name="Rock14" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(542, 2587)
+
+[node name="Rock18" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(802, 2647)
+
+[node name="Rock15" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(254, 2511)
+
+[node name="Rock16" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-38, 2563)
+
+[node name="Rock17" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(-306, 2491)
 
 [node name="HUDCanvasLayer" type="CanvasLayer" parent="."]
 layer = 3
