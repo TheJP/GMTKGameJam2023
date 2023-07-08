@@ -4,8 +4,8 @@ extends Node
 @export var liferegeneration = 1
 @export var claw_attack_speed = 1
 @export var bite_attack_speed = 3
-@export var claw_damage = 1
-@export var bite_damage = 1
+@export var claw_damage = 50
+@export var bite_damage = 50
 @export var claw_range = 200
 @export var bite_range = 150
 @export var scariness = 1

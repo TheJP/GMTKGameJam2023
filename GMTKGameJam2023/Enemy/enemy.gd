@@ -7,7 +7,7 @@ func _physics_process(delta: float):
 	move_and_slide()
 
 func _on_entity_health_changed(new_health):
-	if (new_health < 0):
+	if (new_health <= 0):
 		$DeathBehaviour.on_death()
 
 

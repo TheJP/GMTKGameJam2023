@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwiyn7b564aub"]
+[gd_scene load_steps=3 format=3 uid="uid://d3kg5e7r04ht2"]
 
 [ext_resource type="PackedScene" uid="uid://cspb3vj40bncf" path="res://DowngradeSystem/DowngradeCard.tscn" id="1_7gyn2"]
 [ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceBiteDamage.gd" id="2_ha60n"]

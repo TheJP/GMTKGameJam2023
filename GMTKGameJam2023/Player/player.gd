@@ -5,6 +5,7 @@ extends CharacterBody2D
 func _ready():
 	$Entity.health = PlayerStats.max_health
 	GameState.reset()
+	PlayerStats.update_player_stats()
 
 func _on_entity_health_changed(new_health):
 	$AnimationPlayer.play("on_damage_taken")

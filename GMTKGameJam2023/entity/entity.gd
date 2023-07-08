@@ -8,3 +8,4 @@ signal health_changed(new_health: int)
 func on_health_changed(new_health):
 	health = new_health
 	health_changed.emit(new_health)
+	print(new_health)
