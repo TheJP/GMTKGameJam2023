@@ -56,11 +56,9 @@ script = ExtResource("6_55w2e")
 autostart = true
 
 [node name="Downgrades" parent="UICanvasLayer" instance=ExtResource("4_odlv1")]
-offset_left = 416.0
-offset_top = 32.0
-offset_right = 416.0
-offset_bottom = 32.0
 
 [connection signal="start_downgrade_selection" from="UICanvasLayer/DowngradeTimer" to="UICanvasLayer/Downgrades" method="_on_downgrade_timer_start_downgrade_selection"]
 [connection signal="timeout" from="UICanvasLayer/DowngradeTimer/Timer" to="UICanvasLayer/DowngradeTimer" method="_on_timer_timeout"]
 [connection signal="downgrade_selection_finished" from="UICanvasLayer/Downgrades" to="UICanvasLayer/DowngradeTimer" method="_on_downgrades_downgrade_selection_finished"]
+
+[editable path="UICanvasLayer/Downgrades"]

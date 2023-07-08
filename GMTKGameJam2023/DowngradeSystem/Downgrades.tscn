@@ -10,18 +10,19 @@ script = ExtResource("1_4pcrb")
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 64.0
-offset_right = 1088.0
-offset_bottom = 192.0
+offset_top = 128.0
+offset_right = 1856.0
+offset_bottom = 256.0
 text = "Chose a Downgrade"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DowngradesContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 224.0
-offset_right = 976.0
-offset_bottom = 524.0
+offset_left = 320.0
+offset_top = 352.0
+offset_right = 1536.0
+offset_bottom = 704.0
 mouse_filter = 2
+theme_override_constants/separation = 100
 alignment = 1
