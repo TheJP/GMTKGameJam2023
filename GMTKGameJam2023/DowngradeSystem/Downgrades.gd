@@ -21,7 +21,10 @@ signal downgrade_selection_finished()
 func _ready():
 	Random.randomize()
 	visible = false
-	
+
+func _process(delta):
+	%GameUI.change_time($Timer.time_left, $Timer.wait_time)
+
 func _on_downgrade_selected():
 	visible = false
 	num_downgrades += 1
@@ -30,10 +33,11 @@ func _on_downgrade_selected():
 	if(num_downgrades == 6):
 		$"../../GameCanvasLayer/Player/Sprite2D".set_texture(babySpirte)
 	emit_signal("downgrade_selection_finished")
+	$Timer.start()
 	for card in $DowngradesContainer.get_children():
 		card.queue_free()
-	
-func _on_downgrade_timer_start_downgrade_selection():
+
+func _on_timer_timeout():
 	visible = true
 	for i in range(3):
 		var card = cards[Random.randi_range(0, cards.size()-1)].instantiate()

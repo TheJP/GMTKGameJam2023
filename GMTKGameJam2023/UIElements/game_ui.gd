@@ -5,5 +5,5 @@ func change_health(new_health: int, max_health: int):
 	%HealthBar.value = new_health
 
 func change_time(new_time: float, max_time: float):
-	%TimeBar.max_value = new_time
-	%TimeBar.value = max_time
+	%TimeBar.max_value = max_time
+	%TimeBar.value = new_time

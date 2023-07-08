@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @export var speed : int = 100
 @export var player : CharacterBody2D
-@onready var nav_agent = $NavigationAgent2D as NavigationAgent2D
 
 func _physics_process(delta: float):
 	move_and_slide()

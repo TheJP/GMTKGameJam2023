@@ -9,6 +9,7 @@ extends Node
 @export var claw_range = 200
 @export var bite_range = 150
 @export var scariness = 1
+@export var max_health = 100
 
 func update_player_stats():
 	$"../Game/GameCanvasLayer/Player".speed = movement_speed

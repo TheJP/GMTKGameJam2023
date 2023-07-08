@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
-signal health_changed(new_health: int)
-
 @export var speed = 500
 
 func _ready():
-	pass # Replace with function body.
+	$Entity.health = PlayerStats.max_health
 
-func _physics_process(delta):
+func _on_entity_health_changed(new_health):
+	%GameUI.change_health(new_health, PlayerStats.max_health)
+
+func _physics_process(_delta):
 	var move = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		move.x += 1
@@ -20,6 +21,3 @@ func _physics_process(delta):
 
 	velocity = move.normalized() * speed
 	move_and_slide()
-
-func _process(delta):
-	pass
