@@ -10,11 +10,11 @@ extends Node
 @export var bite_range = 1
 @export var scariness = 1
 
-func initialize_player_stats():
-	$"../GameCanvasLayer/Player".speed = movement_speed
-	$"../GameCanvasLayer/Player/AttackClaws".damage = claw_damage
-	$"../GameCanvasLayer/Player/AttackClaws/Timer".start(claw_attack_speed)
-	$"../GameCanvasLayer/Player/AttackBite".damage = bite_damage
-	$"../GameCanvasLayer/Player/AttackBite/Timer".start(bite_attack_speed )
+func update_player_stats():
+	$"../Game/GameCanvasLayer/Player".speed = movement_speed
+	$"../Game/GameCanvasLayer/Player/AttackClaws".damage = claw_damage
+	$"../Game/GameCanvasLayer/Player/AttackClaws/Timer".start(claw_attack_speed)
+	$"../Game/GameCanvasLayer/Player/AttackBite".damage = bite_damage
+	$"../Game/GameCanvasLayer/Player/AttackBite/Timer".start(bite_attack_speed )
 	
 

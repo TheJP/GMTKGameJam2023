@@ -9,10 +9,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b48kj")
+"texture": ExtResource("2_7r3ci")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_k0son")
+"texture": ExtResource("3_edd8q")
 }],
 "loop": true,
 "name": &"default",
@@ -30,7 +30,7 @@ offsets = PackedFloat32Array(0.82973, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="BiteAnimation" type="Node2D"]
-script = ExtResource("1_swc7b")
+script = ExtResource("1_khsgd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5

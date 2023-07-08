@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=8 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://Player/player.tscn" id="1_yi55a"]
 [ext_resource type="PackedScene" uid="uid://dugyay08um7n5" path="res://Enemy/enemy.tscn" id="2_lexij"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="3_n02ux"]
-[ext_resource type="Script" path="res://DowngradeTimer.gd" id="3_ybr87"]
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
-[ext_resource type="Script" path="res://PlayerStats.gd" id="8_jx70i"]
+[ext_resource type="Script" path="res://DowngradeSystem/DowngradeTimer.gd" id="6_55w2e"]
 
 [node name="Game" type="Node"]
 
@@ -49,7 +48,7 @@ layer = 3
 offset_left = 888.0
 offset_right = 928.0
 offset_bottom = 40.0
-script = ExtResource("3_ybr87")
+script = ExtResource("6_55w2e")
 
 [node name="Timer" type="Timer" parent="UICanvasLayer/DowngradeTimer"]
 autostart = true
@@ -59,9 +58,6 @@ offset_left = 416.0
 offset_top = 32.0
 offset_right = 416.0
 offset_bottom = 32.0
-
-[node name="PlayerStats" type="Node" parent="."]
-script = ExtResource("8_jx70i")
 
 [connection signal="start_downgrade_selection" from="UICanvasLayer/DowngradeTimer" to="UICanvasLayer/Downgrades" method="_on_downgrade_timer_start_downgrade_selection"]
 [connection signal="timeout" from="UICanvasLayer/DowngradeTimer/Timer" to="UICanvasLayer/DowngradeTimer" method="_on_timer_timeout"]
