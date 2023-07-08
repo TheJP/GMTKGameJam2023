@@ -11,6 +11,7 @@
 [node name="Game" type="Node"]
 
 [node name="BackgroundCanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [node name="Background" type="Sprite2D" parent="BackgroundCanvasLayer"]
 texture_repeat = 2
@@ -21,6 +22,7 @@ region_rect = Rect2(0, 0, 100000, 100000)
 
 [node name="GameCanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
+follow_viewport_enabled = true
 
 [node name="Player" parent="GameCanvasLayer" instance=ExtResource("1_yi55a")]
 position = Vector2(252, 178)
