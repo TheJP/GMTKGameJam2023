@@ -6,6 +6,7 @@ func _ready():
 	$Entity.health = PlayerStats.max_health
 
 func _on_entity_health_changed(new_health):
+	$AnimationPlayer.play("on_damage_taken")
 	%GameUI.change_health(new_health, PlayerStats.max_health)
 
 func _physics_process(_delta):
