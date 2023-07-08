@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqqvai0ajoxyv"]
+[gd_scene load_steps=3 format=3 uid="uid://bqqvai0ajoxyv"]
 
-[ext_resource type="PackedScene" uid="uid://bth2rc3mioa1y" path="res://entity/attack.tscn" id="1_46hf0"]
+[ext_resource type="PackedScene" uid="uid://bm46khllehij6" path="res://entity/attack.tscn" id="1_46hf0"]
+[ext_resource type="Script" path="res://player/attack_claws.gd" id="2_vtbr5"]
 
 [node name="Attack" instance=ExtResource("1_46hf0")]
 attack_enemy = true
@@ -8,3 +9,8 @@ is_aoe = true
 
 [node name="Timer" parent="." index="1"]
 wait_time = 1.5
+
+[node name="Animation" type="Node" parent="." index="2"]
+script = ExtResource("2_vtbr5")
+
+[connection signal="damage_target" from="." to="Animation" method="_on_attack_damage_target"]

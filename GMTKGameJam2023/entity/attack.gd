@@ -1,5 +1,7 @@
 extends Node2D
 
+signal damage_target(body: PhysicsBody2D)
+
 @export var attack_player = false
 @export var attack_enemy = false
 
@@ -11,7 +13,7 @@ extends Node2D
 var attack_ready = true
 
 func _ready():
-	print("attack ready")
+	pass
 
 func _process(delta):
 	if not attack_ready:
@@ -34,6 +36,7 @@ func deal_damage(body: PhysicsBody2D):
 	
 	var entity: Entity = body.get_node("Entity")
 	entity.health -= damage
+	emit_signal("damage_target", body)
 	print("damaged entity %d" % entity.health)
 
 func _on_timer_timeout():

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://on4e7pc84gih"]
+
+[ext_resource type="Script" path="res://player/claw_animation.gd" id="1_431sf"]
+[ext_resource type="Texture2D" uid="uid://dycp7b6if1820" path="res://Assets/Player/Claw.png" id="1_uhd1r"]
+
+[node name="ClawAnimation" type="Node2D"]
+script = ExtResource("1_431sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_uhd1r")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
