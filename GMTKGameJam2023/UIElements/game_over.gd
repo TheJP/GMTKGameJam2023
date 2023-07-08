@@ -2,6 +2,8 @@ extends CenterContainer
 
 func _ready():
 	%MainMenuButton.grab_focus()
+	if not GameState.has_died:
+		%GameOverSubtitleText.text = ("You lived!\nYour score is: %.1f" % GameState.score)
 
 func _on_button_pressed():
 	await TransitionScreen.fade_to_black()

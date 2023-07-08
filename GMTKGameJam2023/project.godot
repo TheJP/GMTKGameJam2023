@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 TransitionScreen="*res://Effects/TransitionScreen.tscn"
 PlayerStats="*res://PlayerStats.gd"
 ClawAnimation="*res://Player/claw_animation.gd"
+GameState="*res://game_state.gd"
 
 [display]
 

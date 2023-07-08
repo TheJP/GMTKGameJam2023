@@ -13,18 +13,31 @@ grow_vertical = 2
 theme = ExtResource("1_xqowa")
 script = ExtResource("2_j347b")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Label" type="Label" parent="HFlowContainer"]
+[node name="GameOverText" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 250
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MainMenuButton" type="Button" parent="HFlowContainer"]
+[node name="GameOverSubtitleText" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "You died... All your hard work was in vain"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer/CenterContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
@@ -35,4 +48,4 @@ z_index = -1
 position = Vector2(965, 547)
 texture = ExtResource("2_shelm")
 
-[connection signal="pressed" from="HFlowContainer/MainMenuButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/MainMenuButton" to="." method="_on_button_pressed"]
