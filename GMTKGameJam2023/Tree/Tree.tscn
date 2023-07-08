@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqusg6kdpbn7f"]
+
+[ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_5cemb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nb51c"]
+radius = 67.0
+height = 370.0
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.188235, 1, 0.270588, 1)
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("1_5cemb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 32)
+shape = SubResource("CapsuleShape2D_nb51c")
