@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://v380onvs5sbe"]
+
+[ext_resource type="Texture2D" uid="uid://w7b773bdlnws" path="res://Assets/Player/Bite 1.png" id="1_b48kj"]
+[ext_resource type="Script" path="res://player/bite_animation.gd" id="1_swc7b"]
+[ext_resource type="Texture2D" uid="uid://du4ipykq4gyix" path="res://Assets/Player/Bite 2.png" id="2_k0son"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dyhx0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b48kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k0son")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BiteAnimation" type="Node2D"]
+script = ExtResource("1_swc7b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_dyhx0")
+autoplay = "default"
+frame_progress = 0.324321
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.9
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

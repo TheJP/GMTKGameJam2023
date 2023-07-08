@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctbdu7wf1vxb2"]
+
+[ext_resource type="Texture2D" uid="uid://b5ignygeyqu3v" path="res://Assets/MonsterLair/Cave.png" id="1_mgh4h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mit3s"]
+radius = 128.0
+height = 340.0
+
+[node name="MonsterLair" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_mgh4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-26, 10)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_mit3s")

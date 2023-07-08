@@ -37,7 +37,6 @@ func deal_damage(body: PhysicsBody2D):
 	var entity: Entity = body.get_node("Entity")
 	entity.health -= damage
 	emit_signal("damage_target", body)
-	print("damaged entity %d" % entity.health)
 
 func _on_timer_timeout():
 	attack_ready = true

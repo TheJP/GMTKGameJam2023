@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://upcke8g143as"]
+[gd_scene load_steps=4 format=3 uid="uid://upcke8g143as"]
 
 [ext_resource type="PackedScene" uid="uid://bm46khllehij6" path="res://entity/attack.tscn" id="1_glroy"]
+[ext_resource type="Script" path="res://player/attack_bite.gd" id="2_5xjot"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tl7gt"]
 radius = 150.0
@@ -14,3 +15,8 @@ shape = SubResource("CircleShape2D_tl7gt")
 
 [node name="Timer" parent="." index="1"]
 wait_time = 2.0
+
+[node name="Animation" type="Node" parent="." index="2"]
+script = ExtResource("2_5xjot")
+
+[connection signal="damage_target" from="." to="Animation" method="_on_attack_damage_target"]
