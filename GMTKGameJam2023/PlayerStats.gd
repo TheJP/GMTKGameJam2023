@@ -12,11 +12,11 @@ extends Node
 @export var max_health = 100
 
 func update_player_stats():
-	$"../Game/GameCanvasLayer/Player".speed = movement_speed
-	$"../Game/GameCanvasLayer/Player/AttackClaws".damage = claw_damage
-	$"../Game/GameCanvasLayer/Player/AttackClaws/Timer".start(claw_attack_speed)
-	$"../Game/GameCanvasLayer/Player/AttackBite".damage = bite_damage
-	$"../Game/GameCanvasLayer/Player/AttackBite/Timer".start(bite_attack_speed )
-	$"../Game/GameCanvasLayer/Player/AttackBite/Area2D/CollisionShape2D".shape.radius = bite_range
-	$"../Game/GameCanvasLayer/Player/AttackClaws/Area2D/CollisionShape2D".shape.radius = claw_range
+	$"../Game/GameCanvasLayer/YSortNode/Player".speed = movement_speed
+	$"../Game/GameCanvasLayer/YSortNode/Player/AttackClaws".damage = claw_damage
+	$"../Game/GameCanvasLayer/YSortNode/Player/AttackClaws/Timer".start(claw_attack_speed)
+	$"../Game/GameCanvasLayer/YSortNode/Player/AttackBite".damage = bite_damage
+	$"../Game/GameCanvasLayer/YSortNode/Player/AttackBite/Timer".start(bite_attack_speed )
+	$"../Game/GameCanvasLayer/YSortNode/Player/AttackBite/Area2D/CollisionShape2D".shape.radius = bite_range
+	$"../Game/GameCanvasLayer/YSortNode/Player/AttackClaws/Area2D/CollisionShape2D".shape.radius = claw_range
 

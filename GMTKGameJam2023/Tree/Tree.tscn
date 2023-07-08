@@ -1,18 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqusg6kdpbn7f"]
+[gd_scene load_steps=4 format=3 uid="uid://cqusg6kdpbn7f"]
 
-[ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_5cemb"]
+[ext_resource type="Script" path="res://Tree/RandomizeTree.gd" id="1_8mxy7"]
+[ext_resource type="Texture2D" uid="uid://h1whwahlfr46" path="res://Assets/Trees/Tree_B.png" id="1_50mur"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nb51c"]
-radius = 67.0
-height = 370.0
+radius = 110.0
+height = 272.38
 
 [node name="Tree" type="StaticBody2D"]
+position = Vector2(-1, -19)
+script = ExtResource("1_8mxy7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.188235, 1, 0.270588, 1)
-scale = Vector2(0.19, 0.19)
-texture = ExtResource("1_5cemb")
+position = Vector2(1.2, -151.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_50mur")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 32)
+position = Vector2(-2, -74)
 shape = SubResource("CapsuleShape2D_nb51c")

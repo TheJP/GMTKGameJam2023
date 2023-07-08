@@ -20,10 +20,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgoll"]
-radius = 54.0
-height = 290.0
+radius = 63.0
+height = 166.0
 
 [node name="EnemyHouse" type="StaticBody2D"]
+position = Vector2(1, -137)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
@@ -32,7 +33,7 @@ autoplay = "default"
 frame_progress = 0.624472
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 32)
+position = Vector2(-3, 86)
 shape = SubResource("CapsuleShape2D_dgoll")
 
 [node name="EnemySpawner" type="Node2D" parent="."]

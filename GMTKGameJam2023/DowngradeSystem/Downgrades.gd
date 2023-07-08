@@ -29,9 +29,9 @@ func _on_downgrade_selected():
 	visible = false
 	num_downgrades += 1
 	if(num_downgrades == 3):
-		$"../../GameCanvasLayer/Player/Sprite2D".set_texture(halfSprite)
+		$"../../GameCanvasLayer/YSortNode/Player/Sprite2D".set_texture(halfSprite)
 	if(num_downgrades == 6):
-		$"../../GameCanvasLayer/Player/Sprite2D".set_texture(babySpirte)
+		$"../../GameCanvasLayer/YSortNode/Player/Sprite2D".set_texture(babySpirte)
 	emit_signal("downgrade_selection_finished")
 	$Timer.start()
 	for card in $DowngradesContainer.get_children():
