@@ -7,7 +7,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_gui_input(event):
-	if Input.is_action_pressed("SelectDowngrade"):
+	if Input.is_action_pressed("select_downgrade"):
 		emit_signal("downgrade_selected")
 
 func _on_mouse_entered():

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=5 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://Player/player.tscn" id="1_yi55a"]
 [ext_resource type="PackedScene" uid="uid://dugyay08um7n5" path="res://Enemy/enemy.tscn" id="2_lexij"]
+[ext_resource type="Script" path="res://DowngradeTimer.gd" id="3_ybr87"]
+[ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 
 [node name="Game" type="Node"]
 
@@ -10,3 +12,22 @@ position = Vector2(252, 178)
 
 [node name="Enemy" parent="." instance=ExtResource("2_lexij")]
 position = Vector2(627, 369)
+
+[node name="DowngradeTimer" type="RichTextLabel" parent="."]
+offset_left = 888.0
+offset_right = 928.0
+offset_bottom = 40.0
+script = ExtResource("3_ybr87")
+
+[node name="Timer" type="Timer" parent="DowngradeTimer"]
+autostart = true
+
+[node name="Downgrades" parent="." instance=ExtResource("4_odlv1")]
+offset_left = 416.0
+offset_top = 32.0
+offset_right = 416.0
+offset_bottom = 32.0
+
+[connection signal="start_downgrade_selection" from="DowngradeTimer" to="Downgrades" method="_on_downgrade_timer_start_downgrade_selection"]
+[connection signal="timeout" from="DowngradeTimer/Timer" to="DowngradeTimer" method="_on_timer_timeout"]
+[connection signal="downgrade_selection_finished" from="Downgrades" to="DowngradeTimer" method="_on_downgrades_downgrade_selection_finished"]
