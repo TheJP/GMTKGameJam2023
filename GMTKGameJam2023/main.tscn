@@ -70,7 +70,6 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 
-[connection signal="downgrade_selection_finished" from="UICanvasLayer/Downgrades" to="UICanvasLayer/Downgrades/Timer" method="_on_downgrades_downgrade_selection_finished"]
 [connection signal="timeout" from="UICanvasLayer/Downgrades/Timer" to="UICanvasLayer/Downgrades" method="_on_timer_timeout"]
 
 [editable path="UICanvasLayer/Downgrades"]
