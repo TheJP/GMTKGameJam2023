@@ -11,11 +11,8 @@ func _process(delta):
 		remainingSeconds = 30
 	set_text(str(remainingSeconds))
 
-
-
 func _on_timer_timeout():
 	remainingSeconds -= 1
-
 
 func _on_downgrades_downgrade_selection_finished():
 	$Timer.start()
