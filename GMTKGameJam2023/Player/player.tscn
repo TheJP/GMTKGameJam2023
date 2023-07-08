@@ -29,4 +29,13 @@ shape = SubResource("CapsuleShape2D_bn526")
 
 [node name="AttackBite" parent="." instance=ExtResource("5_s2j8r")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.15
+drag_top_margin = 0.15
+drag_right_margin = 0.15
+editor_draw_drag_margin = true
+
 [connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]
