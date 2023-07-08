@@ -38,8 +38,17 @@ position = Vector2(1267, 294)
 
 [node name="Enemies" type="Node" parent="GameCanvasLayer"]
 
-[node name="Enemy" parent="GameCanvasLayer/Enemies" instance=ExtResource("2_lexij")]
-position = Vector2(627, 369)
+[node name="Enemy2" parent="GameCanvasLayer/Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_lexij")]
+position = Vector2(1393, 624)
+player = NodePath("../../Player")
+
+[node name="Enemy" parent="GameCanvasLayer/Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_lexij")]
+position = Vector2(958, 490)
+player = NodePath("../../Player")
+
+[node name="Enemy3" parent="GameCanvasLayer/Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_lexij")]
+position = Vector2(531, 512)
+player = NodePath("../../Player")
 
 [node name="Corpses" type="Node" parent="GameCanvasLayer"]
 

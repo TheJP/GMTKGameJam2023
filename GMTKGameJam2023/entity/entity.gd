@@ -1,7 +1,7 @@
 class_name Entity
 extends Node
 
-signal health_changed(new_health)
+signal health_changed(new_health: int)
 
 @export var health = 100 : set = on_health_changed
 
