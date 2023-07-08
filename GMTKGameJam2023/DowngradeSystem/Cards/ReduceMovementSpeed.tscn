@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bi3ayun40cdh8"]
 
 [ext_resource type="PackedScene" uid="uid://cspb3vj40bncf" path="res://DowngradeSystem/DowngradeCard.tscn" id="1_1lllm"]
-[ext_resource type="Script" path="res://ReduceMovementSpeed.gd" id="2_1cyd1"]
+[ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceMovementSpeed.gd" id="2_1cyd1"]
 
 [node name="Downgrade" instance=ExtResource("1_1lllm")]
 

@@ -1,25 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://v380onvs5sbe"]
+[gd_scene load_steps=9 format=3 uid="uid://bx5qwn1tqjj3v"]
 
-[ext_resource type="Script" path="res://Player/bite_animation.gd" id="1_khsgd"]
-[ext_resource type="Texture2D" uid="uid://w7b773bdlnws" path="res://Assets/Player/Bite 1.png" id="2_7r3ci"]
-[ext_resource type="Texture2D" uid="uid://du4ipykq4gyix" path="res://Assets/Player/Bite 2.png" id="3_edd8q"]
+[ext_resource type="Texture2D" uid="uid://w7b773bdlnws" path="res://Assets/Player/Bite 1.png" id="1_b48kj"]
+[ext_resource type="Script" path="res://player/bite_animation.gd" id="1_swc7b"]
+[ext_resource type="Texture2D" uid="uid://du4ipykq4gyix" path="res://Assets/Player/Bite 2.png" id="2_k0son"]
+[ext_resource type="Texture2D" uid="uid://8pixapcbc44" path="res://Assets/Particles/particle_1.png" id="4_qy4od"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dyhx0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7r3ci")
+"texture": ExtResource("1_b48kj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_edd8q")
+"texture": ExtResource("2_k0son")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q4dmd"]
+
+[sub_resource type="Curve" id="Curve_i6bac"]
+_data = [Vector2(0.0074813, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.694737), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_gbhkc"]
+offsets = PackedFloat32Array(0.82973, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
 [node name="BiteAnimation" type="Node2D"]
-script = ExtResource("1_khsgd")
+script = ExtResource("1_swc7b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
@@ -27,6 +38,52 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_dyhx0")
 autoplay = "default"
 frame_progress = 0.324321
+
+[node name="Bite 1" type="CPUParticles2D" parent="AnimatedSprite2D"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_q4dmd")
+position = Vector2(350, 150)
+scale = Vector2(6.66667, 6.66667)
+amount = 5
+lifetime = 0.2
+speed_scale = 0.05
+randomness = 1.0
+draw_order = 1
+texture = ExtResource("4_qy4od")
+emission_shape = 2
+emission_sphere_radius = 16.87
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 2.0
+angle_max = 540.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_i6bac")
+color_initial_ramp = SubResource("Gradient_gbhkc")
+
+[node name="Bite 2" type="CPUParticles2D" parent="AnimatedSprite2D"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_q4dmd")
+position = Vector2(-350, 150)
+scale = Vector2(6.66667, 6.66667)
+amount = 5
+lifetime = 0.2
+speed_scale = 0.05
+randomness = 1.0
+draw_order = 1
+texture = ExtResource("4_qy4od")
+emission_shape = 2
+emission_sphere_radius = 16.87
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 2.0
+angle_max = 540.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_i6bac")
+color_initial_ramp = SubResource("Gradient_gbhkc")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.9
