@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://b81l3j5sf8cys"]
+
+[ext_resource type="Theme" uid="uid://cyiqrtd5vtqcq" path="res://UIElements/ui_theme.tres" id="1_xqowa"]
+[ext_resource type="Script" path="res://UIElements/game_over.gd" id="2_j347b"]
+[ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="2_shelm"]
+
+[node name="GameOver" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xqowa")
+script = ExtResource("2_j347b")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HFlowContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 250
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="HFlowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Main Menu"
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(965, 547)
+texture = ExtResource("2_shelm")
+
+[connection signal="pressed" from="HFlowContainer/MainMenuButton" to="." method="_on_button_pressed"]

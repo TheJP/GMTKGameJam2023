@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctbdu7wf1vxb2"]
+[gd_scene load_steps=6 format=3 uid="uid://ctbdu7wf1vxb2"]
 
 [ext_resource type="Texture2D" uid="uid://b5ignygeyqu3v" path="res://Assets/MonsterLair/Cave.png" id="1_mgh4h"]
+[ext_resource type="Script" path="res://monster_lair/monster_lair.gd" id="1_xypf1"]
+[ext_resource type="Theme" uid="uid://cyiqrtd5vtqcq" path="res://UIElements/ui_theme.tres" id="2_beufi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mit3s"]
 radius = 128.0
 height = 340.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6jm2f"]
+radius = 118.207
+
 [node name="MonsterLair" type="StaticBody2D"]
+script = ExtResource("1_xypf1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
@@ -16,3 +22,24 @@ texture = ExtResource("1_mgh4h")
 position = Vector2(-26, 10)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_mit3s")
+
+[node name="EntryArea2D" type="Area2D" parent="."]
+position = Vector2(-21, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntryArea2D"]
+shape = SubResource("CircleShape2D_6jm2f")
+debug_color = Color(0, 0.647059, 0.219608, 0.419608)
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+process_mode = 3
+title = "Enter Lair?!"
+initial_position = 2
+size = Vector2i(805, 121)
+unresizable = true
+always_on_top = true
+theme = ExtResource("2_beufi")
+dialog_text = "Do you wanna enter the lair to rest and end the game?"
+
+[connection signal="body_entered" from="EntryArea2D" to="." method="_on_entry_area_2d_body_entered"]
+[connection signal="canceled" from="AcceptDialog" to="." method="_on_accept_dialog_canceled"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
