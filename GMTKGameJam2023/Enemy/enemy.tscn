@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_uefpo"]
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="2_dj0ys"]
-[ext_resource type="Texture2D" uid="uid://bn7m6cnvlexvu" path="res://Assets/Enemy/Enemy_A.png" id="3_63ahh"]
+[ext_resource type="Texture2D" uid="uid://deebgn0eqqhkg" path="res://Assets/Enemy/Enemy_A_Attack.png" id="3_41pcs"]
 [ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://Enemy/attack_enemy.tscn" id="4_xlu0q"]
 [ext_resource type="Script" path="res://Enemy/spawn_corpse.gd" id="5_ku71t"]
 
@@ -20,10 +20,9 @@ script = ExtResource("1_uefpo")
 [node name="Entity" parent="." instance=ExtResource("2_dj0ys")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.439216, 0.368627, 1)
 position = Vector2(0, -36)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("3_63ahh")
+texture = ExtResource("3_41pcs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -11)
@@ -33,7 +32,7 @@ shape = SubResource("CapsuleShape2D_gqael")
 
 [node name="DeathBehaviour" type="Node" parent="."]
 script = ExtResource("5_ku71t")
-corpse_texture = ExtResource("3_63ahh")
+corpse_texture = ExtResource("3_41pcs")
 
 [node name="DirectionTimer" type="Timer" parent="."]
 wait_time = 0.5

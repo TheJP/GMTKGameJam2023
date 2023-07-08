@@ -26,18 +26,20 @@ func _process(delta):
 	%GameUI.change_time($Timer.time_left, $Timer.wait_time)
 
 func _on_downgrade_selected():
+	get_tree().paused = false
 	visible = false
 	num_downgrades += 1
 	if(num_downgrades == 3):
-		$"../../GameCanvasLayer/YSortNode/Player/Sprite2D".set_texture(halfSprite)
+		%Player/Sprite2D.set_texture(halfSprite)
 	if(num_downgrades == 6):
-		$"../../GameCanvasLayer/YSortNode/Player/Sprite2D".set_texture(babySpirte)
+		%Player/Sprite2D.set_texture(babySpirte)
 	emit_signal("downgrade_selection_finished")
 	$Timer.start()
 	for card in $DowngradesContainer.get_children():
 		card.queue_free()
 
 func _on_timer_timeout():
+	get_tree().paused = true
 	visible = true
 	for i in range(3):
 		var card = cards[Random.randi_range(0, cards.size()-1)].instantiate()
