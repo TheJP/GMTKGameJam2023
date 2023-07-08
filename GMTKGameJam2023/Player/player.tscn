@@ -155,15 +155,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_7q8jb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(1, 5)
 shape = SubResource("CapsuleShape2D_bn526")
 
 [node name="AttackClaws" parent="." instance=ExtResource("4_ifeuw")]
-visible = false
 
 [node name="AttackBite" parent="." instance=ExtResource("5_s2j8r")]
-visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
