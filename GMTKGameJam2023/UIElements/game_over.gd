@@ -1,0 +1,9 @@
+extends CenterContainer
+
+func _ready():
+	%MainMenuButton.grab_focus()
+
+func _on_button_pressed():
+	await TransitionScreen.fade_to_black()
+	get_tree().change_scene_to_file("res://titleScreen.tscn")
+	TransitionScreen.fade_to_normal()
