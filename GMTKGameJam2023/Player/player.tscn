@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dacjlbk3ddu34"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_b54xi"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_auppu"]
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="2_cvdty"]
 [ext_resource type="Texture2D" uid="uid://csj60sh8eqk5y" path="res://Assets/Player/Character 3.png" id="3_tww7n"]
 [ext_resource type="PackedScene" uid="uid://bqqvai0ajoxyv" path="res://Player/attack_claws.tscn" id="4_ifeuw"]
@@ -13,7 +13,7 @@ height = 154.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(1, 1)
 collision_mask = 3
-script = ExtResource("1_b54xi")
+script = ExtResource("1_auppu")
 
 [node name="Entity" parent="." instance=ExtResource("2_cvdty")]
 
@@ -28,3 +28,5 @@ shape = SubResource("CapsuleShape2D_bn526")
 [node name="AttackClaws" parent="." instance=ExtResource("4_ifeuw")]
 
 [node name="AttackBite" parent="." instance=ExtResource("5_s2j8r")]
+
+[connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal health_changed(new_health: int)
+
 @export var speed = 500
 
 func _ready():
