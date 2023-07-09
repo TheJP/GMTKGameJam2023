@@ -207,7 +207,6 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 script = ExtResource("1_431sf")
 
 [node name="ClawAnimation" type="AnimationPlayer" parent="."]
-autoplay = "claw_attack_fade_in"
 libraries = {
 "": SubResource("AnimationLibrary_5dwud")
 }
