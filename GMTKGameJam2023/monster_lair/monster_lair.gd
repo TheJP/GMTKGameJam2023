@@ -11,3 +11,6 @@ func _on_accept_dialog_canceled():
 func _on_accept_dialog_confirmed():
 	GameState.game_over(false)
 	get_tree().paused = false
+
+func is_on_screen() -> bool:
+	return $VisibleOnScreenNotifier2D.is_on_screen()

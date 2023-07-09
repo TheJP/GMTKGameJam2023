@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://uj2b1uonlnlu"]
+[gd_scene load_steps=7 format=3 uid="uid://uj2b1uonlnlu"]
 
 [ext_resource type="Script" path="res://UIElements/game_ui.gd" id="1_l580y"]
+[ext_resource type="Texture2D" uid="uid://b5ignygeyqu3v" path="res://Assets/MonsterLair/Cave.png" id="2_1e8fu"]
+[ext_resource type="Script" path="res://UIElements/monster_lair_indicator.gd" id="2_lvdvi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d36jj"]
 bg_color = Color(0, 0, 0, 0.490196)
@@ -80,3 +82,15 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Score: 0"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="MonsterLairIndicator" type="TextureRect" parent="Control"]
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("2_1e8fu")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("2_lvdvi")

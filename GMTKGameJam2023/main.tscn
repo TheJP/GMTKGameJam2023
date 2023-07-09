@@ -1031,8 +1031,10 @@ position = Vector2(-306, 2491)
 [node name="HUDCanvasLayer" type="CanvasLayer" parent="."]
 layer = 3
 
-[node name="GameUI" parent="HUDCanvasLayer" instance=ExtResource("8_33vkx")]
+[node name="GameUI" parent="HUDCanvasLayer" node_paths=PackedStringArray("player", "monster_lair") instance=ExtResource("8_33vkx")]
 unique_name_in_owner = true
+player = NodePath("../../GameCanvasLayer/YSortNode/Player")
+monster_lair = NodePath("../../GameCanvasLayer/YSortNode/Buildings/MonsterLair")
 
 [node name="UICanvasLayer" type="CanvasLayer" parent="."]
 layer = 4
