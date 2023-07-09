@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1ernqqprq0vw"]
+
+[ext_resource type="Texture2D" uid="uid://10561ijblwas" path="res://Assets/Buildings/Path.png" id="1_3kot6"]
+
+[node name="Path" type="Sprite2D"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_3kot6")
