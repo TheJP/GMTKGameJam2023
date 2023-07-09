@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://uj2b1uonlnlu"]
+[gd_scene load_steps=8 format=3 uid="uid://uj2b1uonlnlu"]
 
 [ext_resource type="Script" path="res://UIElements/game_ui.gd" id="1_l580y"]
 [ext_resource type="Texture2D" uid="uid://b5ignygeyqu3v" path="res://Assets/MonsterLair/Cave.png" id="2_1e8fu"]
 [ext_resource type="Script" path="res://UIElements/monster_lair_indicator.gd" id="2_lvdvi"]
+[ext_resource type="Texture2D" uid="uid://bn4odnkmfb0rs" path="res://Assets/ArrowRight.png" id="4_js84n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d36jj"]
 bg_color = Color(0, 0, 0, 0.490196)
@@ -94,3 +95,14 @@ texture = ExtResource("2_1e8fu")
 expand_mode = 2
 stretch_mode = 4
 script = ExtResource("2_lvdvi")
+
+[node name="Arrow" type="TextureRect" parent="Control/MonsterLairIndicator"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 76.0
+offset_right = 84.0
+offset_bottom = 146.0
+pivot_offset = Vector2(35, 35)
+texture = ExtResource("4_js84n")
+expand_mode = 2
+stretch_mode = 4

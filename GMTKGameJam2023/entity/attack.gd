@@ -33,7 +33,7 @@ func _process(delta):
 func deal_damage(body: PhysicsBody2D):
 	if not body.has_node("Entity") or not body.get_node("Entity") is Entity:
 		return
-	
+
 	var entity: Entity = body.get_node("Entity")
 	entity.health -= damage
 	emit_signal("damage_target", body)
