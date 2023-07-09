@@ -12,7 +12,7 @@ extends Node
 @export var health_gain_per_corpse = 10
 
 enum MonsterForm { MONSTER, HALF_MONSTER, BABY }
-@export var monster_form: MonsterForm = MonsterForm.BABY
+@export var monster_form: MonsterForm = MonsterForm.MONSTER
 
 func reset_player_stats():
 	movement_speed = 800
