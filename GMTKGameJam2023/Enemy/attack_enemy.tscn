@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bm46khllehij6" path="res://entity/attack.tscn" id="1_ndh4o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sj6m4"]
-radius = 175.0
+radius = 200.0
 
 [node name="Attack" instance=ExtResource("1_ndh4o")]
 attack_player = true

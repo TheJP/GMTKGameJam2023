@@ -16,7 +16,7 @@ func _on_entity_health_changed(old_health, new_health):
 		AudioController.get_node("monster").play()
 	%GameUI.change_health(new_health, PlayerStats.max_health)
 
-	if $Entity.health <= 0:
+	if new_health <= 0:
 		GameState.game_over(true)
 
 func _on_corpse_eaten():
@@ -36,6 +36,15 @@ func _physics_process(_delta):
 
 	velocity = move.normalized() * speed
 	move_and_slide()
+	if move == Vector2.ZERO:
+		$Sprite2D.pause()
+	elif not $Sprite2D.is_playing():
+		if PlayerStats.monster_form == PlayerStats.MonsterForm.MONSTER:
+			$Sprite2D.play("character1")
+		if PlayerStats.monster_form == PlayerStats.MonsterForm.HALF_MONSTER:
+			$Sprite2D.play("character2")
+		if PlayerStats.monster_form == PlayerStats.MonsterForm.BABY:
+			$Sprite2D.play("character3")
 
 func _process(delta):
 	if $Entity.health > 0:

@@ -21,7 +21,7 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_ypgh5")
 speed = 80
-bravery = 9
+bravery = 2
 angrySprite = ExtResource("2_lbk4m")
 scaredSprite = ExtResource("3_lqpaa")
 
