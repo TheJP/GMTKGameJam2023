@@ -11,6 +11,7 @@ var cards = [
 	preload("res://DowngradeSystem/Cards/ReduceBiteRange.tscn"),
 	preload("res://DowngradeSystem/Cards/ReduceClawRange.tscn"),
 	preload("res://DowngradeSystem/Cards/ReduceCorpseHeal.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceScariness.tscn"),
 ]
 
 var halfSprite = preload("res://Assets/Player/Character 2.png")
@@ -34,7 +35,7 @@ func _on_downgrade_selected():
 		PlayerStats.monster_form = PlayerStats.MonsterForm.HALF_MONSTER
 		AudioController.get_node("becoming_smaller").play()
 		%Player/Sprite2D.play("character2")
-		PlayerStats.scariness -= 5
+		PlayerStats.scariness -= 1
 		PlayerStats.update_player_stats()
 	if(num_downgrades == 6):
 		PlayerStats.monster_form = PlayerStats.MonsterForm.BABY
