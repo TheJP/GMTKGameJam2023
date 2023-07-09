@@ -7,7 +7,7 @@ extends CharacterBody2D
 @export var angrySprite = preload("res://Assets/Enemy/Enemy_A_Attack.png")
 @export var scaredSprite = preload("res://Assets/Enemy/Enemy_A_Shy.png")
 
-var scared = false
+var scared = true
 
 func _physics_process(delta: float):
 	move_and_slide()
@@ -19,11 +19,8 @@ func _on_entity_health_changed(health, new_health):
 
 func _on_direction_timer_timeout():
 	var dir =  global_position.direction_to(player.global_position)
-
-	if(bravery < PlayerStats.scariness):
-		scared = true
-		$Sprite2D.set_texture(scaredSprite)
-	if(bravery >= PlayerStats.scariness):
+	
+	if(scared and bravery >= PlayerStats.scariness):
 		scared = false
 		$Sprite2D.set_texture(angrySprite)
 

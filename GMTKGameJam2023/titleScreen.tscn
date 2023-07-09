@@ -1,6 +1,5 @@
 [gd_scene load_steps=15 format=3 uid="uid://c4pcbslkckvyv"]
 
-[ext_resource type="Script" path="res://UIElements/titleScreen.gd" id="1_wecwy"]
 [ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="2_643i1"]
 [ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="3_m8m44"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="4_6tx0o"]
@@ -11,6 +10,27 @@
 [ext_resource type="Texture2D" uid="uid://70c8a4g153f0" path="res://Assets/Particles/particle_2.png" id="9_jy6v6"]
 [ext_resource type="Texture2D" uid="uid://cjc653ohvqmj2" path="res://Assets/Particles/particle_5.png" id="10_xctby"]
 [ext_resource type="AudioStream" uid="uid://dydu1cesy3ghs" path="res://Assets/Audio/thunder.wav" id="11_k2642"]
+
+[sub_resource type="GDScript" id="GDScript_q35q6"]
+script/source = "extends Control
+
+@onready var start_game_button = %\"StartGameButton\"
+
+func _ready():
+	start_game_button.grab_focus()
+	AudioController.get_node(\"ambience\").play()
+
+func _on_start_game_button_pressed():
+	get_tree().paused = true
+	await TransitionScreen.fade_to_black()
+	get_tree().paused = false
+	get_tree().change_scene_to_file(\"res://main.tscn\")
+	TransitionScreen.fade_to_normal()
+
+func _process(delta):
+	if Input.is_action_pressed(\"start\"):
+		_on_start_game_button_pressed()
+"
 
 [sub_resource type="Animation" id="Animation_mggqa"]
 length = 0.001
@@ -236,7 +256,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wecwy")
+script = SubResource("GDScript_q35q6")
 
 [node name="UI Box" type="MarginContainer" parent="."]
 layout_mode = 1
