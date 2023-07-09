@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://8pixapcbc44" path="res://Assets/Particles/particle_1.png" id="8_uwnok"]
 [ext_resource type="Texture2D" uid="uid://70c8a4g153f0" path="res://Assets/Particles/particle_2.png" id="9_jy6v6"]
 [ext_resource type="Texture2D" uid="uid://cjc653ohvqmj2" path="res://Assets/Particles/particle_5.png" id="10_xctby"]
-[ext_resource type="AudioStream" uid="uid://cq5mrpok8nl63" path="res://Assets/Audio/thunder.wav" id="11_k2642"]
+[ext_resource type="AudioStream" uid="uid://dydu1cesy3ghs" path="res://Assets/Audio/thunder.wav" id="11_k2642"]
 
 [sub_resource type="Animation" id="Animation_mggqa"]
 length = 0.001
