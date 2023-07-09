@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://caq8qgypr3av7"]
+[gd_scene load_steps=3 format=3 uid="uid://b0xkty46fufls"]
 
 [ext_resource type="PackedScene" uid="uid://cspb3vj40bncf" path="res://DowngradeSystem/DowngradeCard.tscn" id="1_1n5ff"]
 [ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceCorpseHeal.gd" id="3_bhaxp"]
 
-[node name="Downgrade" instance=ExtResource("1_1n5ff")]
+[node name="Downgrade3" instance=ExtResource("1_1n5ff")]
 
 [node name="Effect" parent="." index="0"]
 script = ExtResource("3_bhaxp")
