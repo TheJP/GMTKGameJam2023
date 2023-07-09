@@ -9,5 +9,4 @@
 script = ExtResource("2_paks5")
 
 [node name="Label" parent="MarginContainer" index="0"]
-text = "
-Reduce Scariness"
+text = "Become Less Scary"
