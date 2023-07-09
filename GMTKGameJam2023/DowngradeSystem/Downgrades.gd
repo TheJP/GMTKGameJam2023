@@ -56,7 +56,6 @@ func _on_downgrade_selected(index):
 func _on_timer_timeout():
 	if(num_downgrades < 14):
 		get_tree().paused = true
-		AudioController.get_node("cards").play()
 		visible = true
 		for i in range(3):
 			var index = Random.randi_range(0, cards.size()-1)
