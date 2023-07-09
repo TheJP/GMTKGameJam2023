@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
-[ext_resource type="PackedScene" path="res://buildings/rock.tscn" id="5_dxae0"]
+[ext_resource type="PackedScene" uid="uid://budb2o2mjur23" path="res://buildings/rock.tscn" id="5_dxae0"]
 [ext_resource type="PackedScene" uid="uid://cqusg6kdpbn7f" path="res://Tree/Tree.tscn" id="5_vrgku"]
-[ext_resource type="PackedScene" uid="uid://b4ji2tvui6rhk" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
+[ext_resource type="PackedScene" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
 [ext_resource type="PackedScene" uid="uid://uj2b1uonlnlu" path="res://UIElements/game_ui.tscn" id="8_33vkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0nvb"]
@@ -40,6 +40,7 @@ position = Vector2(252, 178)
 y_sort_enabled = true
 
 [node name="MonsterLair" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_1ax52")]
+unique_name_in_owner = true
 position = Vector2(3088, 2276)
 
 [node name="EnemyHouse" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
