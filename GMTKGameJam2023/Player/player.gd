@@ -16,7 +16,7 @@ func _on_entity_health_changed(old_health, new_health):
 		AudioController.get_node("monster").play()
 	%GameUI.change_health(new_health, PlayerStats.max_health)
 
-	if $Entity.health <= 0:
+	if new_health <= 0:
 		GameState.game_over(true)
 
 func _on_corpse_eaten():
