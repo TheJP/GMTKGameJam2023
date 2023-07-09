@@ -10,6 +10,7 @@ var cards = [
 	preload("res://DowngradeSystem/Cards/ReduceBiteSpeed.tscn"),
 	preload("res://DowngradeSystem/Cards/ReduceBiteRange.tscn"),
 	preload("res://DowngradeSystem/Cards/ReduceClawRange.tscn"),
+	preload("res://DowngradeSystem/Cards/ReduceCorpseHeal.tscn"),
 ]
 
 var halfSprite = preload("res://Assets/Player/Character 2.png")

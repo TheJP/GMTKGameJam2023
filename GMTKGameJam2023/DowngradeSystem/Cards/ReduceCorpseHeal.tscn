@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cspb3vj40bncf"]
+[gd_scene load_steps=4 format=3 uid="uid://dxn0l3bhf8aeg"]
 
-[ext_resource type="Texture2D" uid="uid://7ej5bmy4mr2m" path="res://DowngradeSystem/Card.png" id="1_hk08n"]
-[ext_resource type="Script" path="res://DowngradeSystem/DowngradeCard.gd" id="2_enrp3"]
-[ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceCorpseHeal.gd" id="3_7h6jx"]
+[ext_resource type="Texture2D" uid="uid://7ej5bmy4mr2m" path="res://DowngradeSystem/Card.png" id="1_v14eb"]
+[ext_resource type="Script" path="res://DowngradeSystem/DowngradeCard.gd" id="2_ucnd3"]
+[ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceCorpseHeal.gd" id="3_bhaxp"]
 
 [node name="Downgrade" type="NinePatchRect"]
 custom_minimum_size = Vector2(100, 100)
@@ -20,15 +20,15 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 0
-texture = ExtResource("1_hk08n")
+texture = ExtResource("1_v14eb")
 patch_margin_left = 45
 patch_margin_top = 45
 patch_margin_right = 45
 patch_margin_bottom = 45
-script = ExtResource("2_enrp3")
+script = ExtResource("2_ucnd3")
 
 [node name="Effect" type="Node" parent="."]
-script = ExtResource("3_7h6jx")
+script = ExtResource("3_bhaxp")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -41,6 +41,7 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 1
+text = "Reduce health gained by eating a corpse"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

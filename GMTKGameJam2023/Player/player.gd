@@ -14,6 +14,10 @@ func _on_entity_health_changed(new_health):
 	if $Entity.health <= 0:
 		GameState.game_over(true)
 
+func _on_corpse_eaten():
+	print("called corpse eaten")
+	$Entity.health += PlayerStats.health_gain_per_corpse
+
 func _physics_process(_delta):
 	var move = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):

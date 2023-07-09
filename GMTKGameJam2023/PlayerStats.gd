@@ -10,6 +10,7 @@ extends Node
 @export var bite_range = 150
 @export var scariness = 1
 @export var max_health = 100
+@export var health_gain_per_corpse = 10
 
 func update_player_stats():
 	$"../Game/GameCanvasLayer/YSortNode/Player".speed = movement_speed
