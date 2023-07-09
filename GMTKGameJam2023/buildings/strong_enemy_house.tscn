@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4ji2tvui6rhk"]
+[gd_scene load_steps=7 format=3 uid="uid://kqq2yecbxusl"]
 
 [ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_24rsd"]
 [ext_resource type="Texture2D" uid="uid://c1qiy258wyoj2" path="res://Assets/Buildings/Enemy_House 2.png" id="2_7hvu7"]
 [ext_resource type="Script" path="res://buildings/EnemySpawner.gd" id="3_7s01p"]
-[ext_resource type="PackedScene" uid="uid://cfxeui2rtwxhb" path="res://Enemy/strong_enemy.tscn" id="4_enmwo"]
+[ext_resource type="PackedScene" uid="uid://cacyrugu5utlx" path="res://Enemy/strong_enemy.tscn" id="4_enmwo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdjwn"]
 animations = [{

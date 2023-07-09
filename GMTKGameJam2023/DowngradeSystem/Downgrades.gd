@@ -32,8 +32,12 @@ func _on_downgrade_selected():
 	num_downgrades += 1
 	if(num_downgrades == 3):
 		%Player/Sprite2D.set_texture(halfSprite)
+		PlayerStats.scariness -= 5
+		PlayerStats.update_player_stats()
 	if(num_downgrades == 6):
 		%Player/Sprite2D.set_texture(babySpirte)
+		PlayerStats.scariness = 0
+		PlayerStats.update_player_stats()
 	emit_signal("downgrade_selection_finished")
 	$Timer.start()
 	for card in $DowngradesContainer.get_children():

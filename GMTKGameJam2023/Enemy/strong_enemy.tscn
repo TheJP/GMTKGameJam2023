@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfxeui2rtwxhb"]
+[gd_scene load_steps=9 format=3 uid="uid://cacyrugu5utlx"]
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_ypgh5"]
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="2_coy4y"]
+[ext_resource type="Texture2D" uid="uid://dvt5qxfpt7foy" path="res://Assets/Enemy/Enemy_B_Attack.png" id="2_lbk4m"]
 [ext_resource type="Texture2D" uid="uid://bmgvc8kexfp1u" path="res://Assets/Enemy/Enemy_B_Shy.png" id="3_lqpaa"]
 [ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://Enemy/attack_enemy.tscn" id="4_cc841"]
 [ext_resource type="Script" path="res://Enemy/spawn_corpse.gd" id="5_gyrmh"]
@@ -18,6 +19,9 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_ypgh5")
 speed = 80
+bravery = 9
+angrySprite = ExtResource("2_lbk4m")
+scaredSprite = ExtResource("3_lqpaa")
 
 [node name="Entity" parent="." instance=ExtResource("2_coy4y")]
 health = 200

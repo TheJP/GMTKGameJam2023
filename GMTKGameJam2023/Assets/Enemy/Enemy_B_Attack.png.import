@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ej5bmy4mr2m"
-path="res://.godot/imported/Card.png-7def326bea3d3a82dccb741f1c58cf5c.ctex"
+uid="uid://dvt5qxfpt7foy"
+path="res://.godot/imported/Enemy_B_Attack.png-15545221bf087c06d7b5d6b03b32e013.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DowngradeSystem/Card.png"
-dest_files=["res://.godot/imported/Card.png-7def326bea3d3a82dccb741f1c58cf5c.ctex"]
+source_file="res://Assets/Enemy/Enemy_B_Attack.png"
+dest_files=["res://.godot/imported/Enemy_B_Attack.png-15545221bf087c06d7b5d6b03b32e013.ctex"]
 
 [params]
 

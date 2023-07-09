@@ -7,15 +7,15 @@ func _ready():
 	GameState.reset()
 	PlayerStats.update_player_stats()
 
-func _on_entity_health_changed(new_health):
-	$AnimationPlayer.play("on_damage_taken")
+func _on_entity_health_changed(old_health, new_health):
+	if(new_health < old_health && new_health != PlayerStats.max_health):
+		$AnimationPlayer.play("on_damage_taken")
 	%GameUI.change_health(new_health, PlayerStats.max_health)
 	
 	if $Entity.health <= 0:
 		GameState.game_over(true)
 
 func _on_corpse_eaten():
-	print("called corpse eaten")
 	$Entity.health += PlayerStats.health_gain_per_corpse
 
 func _physics_process(_delta):

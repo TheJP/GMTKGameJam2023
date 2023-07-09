@@ -8,7 +8,7 @@ extends Node
 @export var bite_damage = 50
 @export var claw_range = 200
 @export var bite_range = 150
-@export var scariness = 1
+@export var scariness = 10
 @export var max_health = 100
 @export var health_gain_per_corpse = 10
 
