@@ -11,4 +11,3 @@ script = ExtResource("3_bhaxp")
 [node name="Label" parent="MarginContainer" index="0"]
 text = "
 Reduce Healing from Corpses"
-vertical_alignment = 1
