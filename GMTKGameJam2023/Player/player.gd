@@ -10,7 +10,7 @@ func _ready():
 func _on_entity_health_changed(new_health):
 	$AnimationPlayer.play("on_damage_taken")
 	%GameUI.change_health(new_health, PlayerStats.max_health)
-	
+
 	if $Entity.health <= 0:
 		GameState.game_over(true)
 

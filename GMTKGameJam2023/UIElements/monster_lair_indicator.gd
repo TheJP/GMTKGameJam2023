@@ -1,14 +1,14 @@
 extends TextureRect
 
 const MARGIN = Vector2(50, 65)
-const INDICATOR_SIZE = Vector2(100, 100)
+const INDICATOR_SIZE = Vector2(100, 150)
 
 func _process(delta):
 	var is_on_screen: bool = owner.monster_lair.is_on_screen()
 	visible = not is_on_screen
 	if is_on_screen:
 		return
-	
+
 	var player: Vector2 = owner.player.global_position
 	var monster_lair: Vector2 = owner.monster_lair.global_position
 	var viewport: Rect2 = get_viewport_rect()
@@ -18,6 +18,8 @@ func _process(delta):
 	direction = direction.normalized()
 	var ray_start: Vector2 = viewport.get_center()
 	var ray_end: Vector2 = ray_start + ((viewport.size.x + viewport.size.y) * direction)
+
+	$Arrow.rotation = atan2(direction.y, direction.x)
 
 	var viewport_sides: Array[Array] = [
 		[viewport.position, Vector2(viewport.end.x, viewport.position.y)], # top
