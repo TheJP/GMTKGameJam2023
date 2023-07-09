@@ -20,4 +20,4 @@ func _on_area_2d_body_entered(_body):
 	texture = eaten_texture
 	$Area2D.set_deferred("monitorable", false)
 	$Area2D.set_deferred("monitoring", false)
-	$Container.queue_free()
+	$Container.visible = false

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cenb4ruamsiqf" path="res://Assets/Frame.png" id="1_fv3oq"]
 [ext_resource type="Script" path="res://DowngradeSystem/DowngradeCard.gd" id="2_enrp3"]
-[ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="3_vpnpj"]
+[ext_resource type="FontFile" uid="uid://dlc75aa3kulfl" path="res://Assets/NanumPenScript-Regular.ttf" id="3_vpnpj"]
 
 [node name="Downgrade3" type="NinePatchRect"]
 custom_minimum_size = Vector2(100, 100)

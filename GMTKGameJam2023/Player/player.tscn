@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_lfbm6"]
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="2_cvdty"]
-[ext_resource type="SpriteFrames" uid="uid://clw5r30chm7sg" path="res://Player/character_1_animation.tres" id="3_2lwcg"]
+[ext_resource type="SpriteFrames" path="res://Player/character_1_animation.tres" id="3_2lwcg"]
 [ext_resource type="Texture2D" uid="uid://8pixapcbc44" path="res://Assets/Particles/particle_1.png" id="4_gh4li"]
 [ext_resource type="PackedScene" uid="uid://bqqvai0ajoxyv" path="res://Player/attack_claws.tscn" id="4_ifeuw"]
 [ext_resource type="Texture2D" uid="uid://70c8a4g153f0" path="res://Assets/Particles/particle_2.png" id="5_1ij8f"]

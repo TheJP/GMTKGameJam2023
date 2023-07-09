@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bn4odnkmfb0rs" path="res://Assets/ArrowRight.png" id="4_js84n"]
 [ext_resource type="Texture2D" uid="uid://cenb4ruamsiqf" path="res://Assets/Frame.png" id="5_r61rx"]
 [ext_resource type="Script" path="res://UIElements/form_chaned_popup.gd" id="5_yndj3"]
-[ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="7_p477g"]
-[ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="8_50mwb"]
+[ext_resource type="FontFile" uid="uid://b6ivishkxit4u" path="res://Assets/FrederickatheGreat-Regular.ttf" id="7_p477g"]
+[ext_resource type="FontFile" uid="uid://dlc75aa3kulfl" path="res://Assets/NanumPenScript-Regular.ttf" id="8_50mwb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d36jj"]
 bg_color = Color(0, 0, 0, 0.490196)
