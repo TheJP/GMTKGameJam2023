@@ -1043,6 +1043,7 @@ layer = 4
 process_mode = 3
 
 [node name="Timer" type="Timer" parent="UICanvasLayer/Downgrades"]
+process_mode = 1
 wait_time = 30.0
 one_shot = true
 autostart = true
