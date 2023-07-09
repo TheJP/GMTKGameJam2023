@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=11 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://Player/player.tscn" id="1_yi55a"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="3_n02ux"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
 [ext_resource type="PackedScene" path="res://buildings/rock.tscn" id="5_dxae0"]
 [ext_resource type="PackedScene" uid="uid://cqusg6kdpbn7f" path="res://Tree/Tree.tscn" id="5_vrgku"]
+[ext_resource type="PackedScene" uid="uid://b4ji2tvui6rhk" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
 [ext_resource type="PackedScene" uid="uid://uj2b1uonlnlu" path="res://UIElements/game_ui.tscn" id="8_33vkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0nvb"]
@@ -94,6 +95,12 @@ position = Vector2(-91, -1729)
 
 [node name="EnemyHouse18" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
 position = Vector2(2208, -2)
+
+[node name="EnemyHouse19" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
+position = Vector2(511, -796)
+
+[node name="EnemyHouse20" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
+position = Vector2(231, 1091)
 
 [node name="Enemies" type="Node2D" parent="GameCanvasLayer/YSortNode"]
 y_sort_enabled = true

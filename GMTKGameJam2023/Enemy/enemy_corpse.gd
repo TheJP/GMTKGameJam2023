@@ -14,9 +14,8 @@ func _on_area_2d_body_entered(body):
 	$AnimationPlayer.play("RESET")
 	$CPUParticles2D.visible = false
 	$CPUParticles2D.emitting = false
-	scale.x = -scale.x 
 	corpse_eaten.emit()
 	texture = eaten_texture
-	$Area2D.monitorable = false
-	$Area2D.monitoring = false
+	$Area2D.set_deferred("monitorable", false)
+	$Area2D.set_deferred("monitoring", false)
 	
