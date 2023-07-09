@@ -21,6 +21,7 @@ TransitionScreen="*res://Effects/TransitionScreen.tscn"
 PlayerStats="*res://PlayerStats.gd"
 ClawAnimation="*res://Player/claw_animation.gd"
 GameState="*res://game_state.gd"
+AudioController="*res://AudioController.tscn"
 
 [display]
 

@@ -7,6 +7,7 @@ var enemy_corpse = preload("res://Enemy/enemy_corpse.tscn")
 
 func on_death():
 	var corpse = enemy_corpse.instantiate()
+	AudioController.get_node("dying").play()
 	get_tree().root.get_node("Game/GameCanvasLayer/YSortNode/Corpses").add_child(corpse)
 	corpse.global_position = get_parent().global_position - Vector2(0, 20)
 	corpse.eaten_texture = corpse_eaten_texture

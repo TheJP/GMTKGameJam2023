@@ -4,8 +4,10 @@ extends Control
 
 func _ready():
 	start_game_button.grab_focus()
+	AudioController.get_node("ambience").play()
 
 func _on_start_game_button_pressed():
+	AudioController.get_node("dying").play()
 	get_tree().paused = true
 	await TransitionScreen.fade_to_black()
 	get_tree().paused = false
