@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b50by5owstdvt"]
 
-[ext_resource type="Script" path="res://player/claw_animation.gd" id="1_431sf"]
+[ext_resource type="Script" path="res://Player/claw_animation.gd" id="1_431sf"]
 [ext_resource type="Texture2D" uid="uid://dycp7b6if1820" path="res://Assets/Player/Claw.png" id="1_uhd1r"]
 [ext_resource type="Texture2D" uid="uid://cqgxihtf7nrt4" path="res://Assets/Particles/particle_7.png" id="3_miym5"]
 [ext_resource type="Texture2D" uid="uid://cnbkix78b10ag" path="res://Assets/Particles/particle_8.png" id="4_n2hyd"]
