@@ -172,7 +172,6 @@ radius = 193.333
 height = 866.667
 
 [node name="EnemyCorpse" type="Sprite2D"]
-modulate = Color(0.168627, 0.168627, 0.168627, 1)
 z_index = -5
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_75tvq")
