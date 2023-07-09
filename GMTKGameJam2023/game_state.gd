@@ -12,3 +12,4 @@ func game_over(player_has_died: bool):
 	await TransitionScreen.fade_to_black()
 	get_tree().change_scene_to_file("res://UIElements/game_over.tscn")
 	TransitionScreen.fade_to_normal()
+	PlayerStats.reset_player_stats()

@@ -14,6 +14,19 @@ extends Node
 enum MonsterForm { MONSTER, HALF_MONSTER, BABY }
 @export var monster_form: MonsterForm = MonsterForm.MONSTER
 
+func reset_player_stats():
+	movement_speed = 800
+	claw_attack_speed = 1
+	bite_attack_speed = 2
+	claw_damage = 50
+	bite_damage = 200
+	claw_range = 300
+	bite_range = 150
+	scariness = 3
+	max_health = 100
+	health_gain_per_corpse = 10
+	monster_form = MonsterForm.MONSTER
+
 func update_player_stats():
 	$"../Game/GameCanvasLayer/YSortNode/Player".speed = movement_speed
 	$"../Game/GameCanvasLayer/YSortNode/Player/AttackClaws".damage = claw_damage
