@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4ji2tvui6rhk"]
+
+[ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_24rsd"]
+[ext_resource type="Texture2D" uid="uid://c1qiy258wyoj2" path="res://Assets/Buildings/Enemy_House 2.png" id="2_7hvu7"]
+[ext_resource type="Script" path="res://buildings/EnemySpawner.gd" id="3_7s01p"]
+[ext_resource type="PackedScene" uid="uid://cfxeui2rtwxhb" path="res://Enemy/strong_enemy.tscn" id="4_enmwo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdjwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_24rsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7hvu7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgoll"]
+radius = 63.0
+height = 166.0
+
+[node name="EnemyHouse" type="StaticBody2D"]
+position = Vector2(1, -137)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0.435294, 1, 1)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_wdjwn")
+autoplay = "default"
+frame_progress = 0.624472
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 86)
+shape = SubResource("CapsuleShape2D_dgoll")
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+position = Vector2(0, 264)
+script = ExtResource("3_7s01p")
+enemy = ExtResource("4_enmwo")
+
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+wait_time = 30.0
+autostart = true
+
+[connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_spawn_timer_timeout"]
