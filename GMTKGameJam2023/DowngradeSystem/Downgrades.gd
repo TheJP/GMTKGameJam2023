@@ -14,6 +14,8 @@ var cards = [
 	preload("res://DowngradeSystem/Cards/ReduceScariness.tscn"),
 ]
 
+var card_counts = []
+
 var halfSprite = preload("res://Assets/Player/Character 2.png")
 var babySpirte = preload("res://Assets/Player/Character 1.png")
 
@@ -21,13 +23,16 @@ var Random = RandomNumberGenerator.new()
 signal downgrade_selection_finished()
 
 func _ready():
+	for card in cards:
+		card_counts.append(0)
 	Random.randomize()
 	visible = false
 
 func _process(delta):
 	%GameUI.change_time($Timer.time_left, $Timer.wait_time)
 
-func _on_downgrade_selected():
+func _on_downgrade_selected(index):
+	card_counts[index] += 1
 	get_tree().paused = false
 	visible = false
 	num_downgrades += 1
@@ -49,10 +54,15 @@ func _on_downgrade_selected():
 		card.queue_free()
 
 func _on_timer_timeout():
-	get_tree().paused = true
-	AudioController.get_node("cards").play()
-	visible = true
-	for i in range(3):
-		var card = cards[Random.randi_range(0, cards.size()-1)].instantiate()
-		card.connect("downgrade_selected", Callable(self, "_on_downgrade_selected"))
-		$DowngradesContainer.add_child(card)
+	if(num_downgrades < 14):
+		get_tree().paused = true
+		AudioController.get_node("cards").play()
+		visible = true
+		for i in range(3):
+			var index = Random.randi_range(0, cards.size()-1)
+			while(card_counts[index] >= 2):
+				index = Random.randi_range(0, cards.size()-1)
+			var card = cards[index].instantiate()
+			card.index = index
+			card.connect("downgrade_selected", Callable(self, "_on_downgrade_selected"))
+			$DowngradesContainer.add_child(card)

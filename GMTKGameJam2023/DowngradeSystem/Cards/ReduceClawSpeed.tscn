@@ -9,4 +9,4 @@
 script = ExtResource("2_ogktd")
 
 [node name="Label" parent="MarginContainer" index="0"]
-text = "Increase Claw Cooldown by 1"
+text = "Increase Claw Cooldown"

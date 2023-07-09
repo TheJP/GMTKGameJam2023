@@ -9,4 +9,4 @@
 script = ExtResource("2_p8775")
 
 [node name="Label" parent="MarginContainer" index="0"]
-text = "Increase Bite Cooldown by 1"
+text = "Increase Bite Cooldown"

@@ -15,6 +15,7 @@ func _on_entity_health_changed(old_health, new_health):
 	if(new_health < old_health && new_health != PlayerStats.max_health):
 		$AnimationPlayer.play("on_damage_taken")
 		AudioController.get_node("monster").play()
+		
 	%GameUI.change_health(new_health, PlayerStats.max_health)
 
 	if new_health <= 0:

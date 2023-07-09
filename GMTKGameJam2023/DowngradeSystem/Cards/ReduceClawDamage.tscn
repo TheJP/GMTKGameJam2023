@@ -9,4 +9,4 @@
 script = ExtResource("2_e7upa")
 
 [node name="Label" parent="MarginContainer" index="0"]
-text = "Reduce Claw Damage by 1"
+text = "Reduce Claw Damage"

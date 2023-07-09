@@ -9,4 +9,4 @@
 script = ExtResource("2_1cyd1")
 
 [node name="Label" parent="MarginContainer" index="0"]
-text = "Reduce Speed by 100"
+text = "Become less Scary"
