@@ -12,5 +12,3 @@ wait_time = 1.5
 
 [node name="Animation" type="Node" parent="." index="2"]
 script = ExtResource("2_x6vjq")
-
-[connection signal="damage_target" from="." to="Animation" method="_on_attack_damage_target"]
