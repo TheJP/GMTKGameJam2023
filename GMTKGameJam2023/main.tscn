@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dshy5e3lj4w1u"]
+[gd_scene load_steps=12 format=3 uid="uid://dshy5e3lj4w1u"]
 
 [ext_resource type="PackedScene" uid="uid://dacjlbk3ddu34" path="res://Player/player.tscn" id="1_yi55a"]
+[ext_resource type="PackedScene" uid="uid://b1ernqqprq0vw" path="res://buildings/path.tscn" id="2_0wkwv"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="3_n02ux"]
 [ext_resource type="PackedScene" uid="uid://cd4xfdqxmnkcy" path="res://DowngradeSystem/Downgrades.tscn" id="4_odlv1"]
 [ext_resource type="PackedScene" uid="uid://ctbdu7wf1vxb2" path="res://monster_lair/monster_lair.tscn" id="5_1ax52"]
@@ -24,6 +25,212 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_n02ux")
 region_enabled = true
 region_rect = Rect2(0, 0, 100000, 100000)
+
+[node name="Paths" type="Node2D" parent="BackgroundCanvasLayer"]
+
+[node name="Path" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2072, -2152)
+
+[node name="Path2" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2278, -2089)
+
+[node name="Path3" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2130, -2078)
+
+[node name="Path4" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2051, -2008)
+
+[node name="Path5" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1956, -1940)
+
+[node name="Path7" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2021, -1875)
+
+[node name="Path8" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1984, -1795)
+
+[node name="Path12" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1918, -1732)
+
+[node name="Path10" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2064, -1619)
+
+[node name="Path58" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1458, -1138)
+
+[node name="Path59" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1598, -1045)
+
+[node name="Path60" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1451, -1066)
+
+[node name="Path61" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1142, -540)
+
+[node name="Path62" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1205, -482)
+
+[node name="Path63" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1306, -434)
+
+[node name="Path73" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1437, -465)
+
+[node name="Path65" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1595, -448)
+
+[node name="Path66" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1768, -549)
+
+[node name="Path67" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1757, -629)
+
+[node name="Path68" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1690, -703)
+
+[node name="Path69" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1536, -829)
+
+[node name="Path70" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1573, -933)
+
+[node name="Path71" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1494, -992)
+
+[node name="Path11" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(2231, -1647)
+
+[node name="Path6" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1825, -1993)
+
+[node name="Path13" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1594, -2269)
+
+[node name="Path14" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1568, -2190)
+
+[node name="Path15" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1517, -2122)
+
+[node name="Path16" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1596, -2051)
+
+[node name="Path17" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1645, -1928)
+
+[node name="Path24" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1681, -1988)
+
+[node name="Path19" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1457, -1819)
+
+[node name="Path20" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1370, -1763)
+
+[node name="Path21" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1053, -1800)
+
+[node name="Path22" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1154, -1752)
+
+[node name="Path25" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1052, -1707)
+
+[node name="Path27" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(675, -1652)
+
+[node name="Path28" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(748, -1595)
+
+[node name="Path29" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(891, -1590)
+
+[node name="Path30" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-2109, 604)
+
+[node name="Path31" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-2218, 891)
+
+[node name="Path32" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-1904, 761)
+
+[node name="Path36" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-2058, 665)
+
+[node name="Path40" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-2045, 740)
+
+[node name="Path33" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-1777, 755)
+
+[node name="Path34" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-1834, 805)
+
+[node name="Path35" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-1906, 865)
+
+[node name="Path37" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-2052, 995)
+
+[node name="Path41" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(283, 2766)
+
+[node name="Path57" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(3069, 2465)
+
+[node name="Path42" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(358, 2821)
+
+[node name="Path43" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(501, 2862)
+
+[node name="Path44" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(558, 2932)
+
+[node name="Path45" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(637, 2999)
+
+[node name="Path46" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(652, 3088)
+
+[node name="Path47" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(605, 3157)
+
+[node name="Path48" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(602, 3232)
+
+[node name="Path49" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(568, 3315)
+
+[node name="Path52" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(568, 3315)
+
+[node name="Path54" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(527, 3576)
+
+[node name="Path55" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(584, 3649)
+
+[node name="Path56" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(588, 3726)
+
+[node name="Path53" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(555, 3484)
+
+[node name="Path50" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(518, 3394)
+
+[node name="Path51" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(518, 3394)
+
+[node name="Path39" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-1970, 923)
+
+[node name="Path38" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(-2174, 958)
+
+[node name="Path23" parent="BackgroundCanvasLayer/Paths" instance=ExtResource("2_0wkwv")]
+position = Vector2(1263, -1718)
 
 [node name="GameCanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
@@ -603,6 +810,12 @@ position = Vector2(-144, -2291)
 [node name="Tree5" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup14" instance=ExtResource("5_vrgku")]
 position = Vector2(-311, -2081)
 
+[node name="Tree10" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup14" instance=ExtResource("5_vrgku")]
+position = Vector2(-514, -1984)
+
+[node name="Tree11" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup14" instance=ExtResource("5_vrgku")]
+position = Vector2(-751, -1838)
+
 [node name="Tree6" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup14" instance=ExtResource("5_vrgku")]
 position = Vector2(-401, -2432)
 
@@ -988,6 +1201,12 @@ position = Vector2(2074, -65)
 
 [node name="Rock33" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(2747, -958)
+
+[node name="Rock36" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(1441, -636)
+
+[node name="Rock37" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(1322, -768)
 
 [node name="Rock34" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(2944, -850)
