@@ -9,7 +9,7 @@ func _process(delta):
 	var show_indicaror: bool = not is_on_screen and not is_monster
 
 	visible = show_indicaror
-	if show_indicaror:
+	if not show_indicaror:
 		return
 
 	var player: Vector2 = owner.player.global_position

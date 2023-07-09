@@ -8,6 +8,9 @@ func _ready():
 	PlayerStats.update_player_stats()
 
 func _on_entity_health_changed(old_health, new_health):
+	if(new_health > PlayerStats.max_health):
+		$Entity.health = PlayerStats.max_health
+
 	if(new_health < old_health && new_health != PlayerStats.max_health):
 		$AnimationPlayer.play("on_damage_taken")
 		AudioController.get_node("monster").play()
@@ -37,3 +40,6 @@ func _physics_process(_delta):
 func _process(delta):
 	if $Entity.health > 0:
 		GameState.score += delta
+
+func _on_target_hit():
+	$AnimationPlayer.play("on_damage_taken")

@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 TransitionScreen="*res://Effects/TransitionScreen.tscn"
 PlayerStats="*res://PlayerStats.gd"
-ClawAnimation="*res://Player/claw_animation.gd"
+ClawAnimation="*res://Player/claw_animation.tscn"
 GameState="*res://game_state.gd"
 AudioController="*res://AudioController.tscn"
 

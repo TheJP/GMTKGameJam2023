@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://tguo43kjpayl"]
 
-[ext_resource type="AudioStream" uid="uid://c4nr2nlcy46yd" path="res://Assets/Audio/ambience.wav" id="1_waurt"]
-[ext_resource type="AudioStream" uid="uid://dc27mho75w6sp" path="res://Assets/Audio/click3.ogg" id="2_wna03"]
-[ext_resource type="AudioStream" uid="uid://c4j5jbsuv1sdc" path="res://Assets/Audio/attack.wav" id="3_sagye"]
-[ext_resource type="AudioStream" uid="uid://bu5asp50h7han" path="res://Assets/Audio/becoming baby.wav" id="4_urqrx"]
-[ext_resource type="AudioStream" uid="uid://dpm0jl4bkgajt" path="res://Assets/Audio/becoming lil wolf.wav" id="5_ktqje"]
-[ext_resource type="AudioStream" uid="uid://d3u2pp0pyx3w6" path="res://Assets/Audio/dying.wav" id="6_3wd6u"]
-[ext_resource type="AudioStream" uid="uid://bgo2rihkxbtul" path="res://Assets/Audio/monster.mp3" id="6_c2gye"]
-[ext_resource type="AudioStream" uid="uid://cdu62td3grk75" path="res://Assets/Audio/eating.wav" id="8_ctuuw"]
+[ext_resource type="AudioStream" uid="uid://bfea5iod1j2uy" path="res://Assets/Audio/ambience.wav" id="1_waurt"]
+[ext_resource type="AudioStream" uid="uid://cvae21wsdim4o" path="res://Assets/Audio/click3.ogg" id="2_wna03"]
+[ext_resource type="AudioStream" uid="uid://c2c3g7d4s8wku" path="res://Assets/Audio/attack.wav" id="3_sagye"]
+[ext_resource type="AudioStream" uid="uid://cmp5l600ubu1v" path="res://Assets/Audio/becoming baby.wav" id="4_urqrx"]
+[ext_resource type="AudioStream" uid="uid://cr0ulxb4se4xm" path="res://Assets/Audio/becoming lil wolf.wav" id="5_ktqje"]
+[ext_resource type="AudioStream" uid="uid://bpeh62kmu11tf" path="res://Assets/Audio/dying.wav" id="6_3wd6u"]
+[ext_resource type="AudioStream" uid="uid://l71wihaq5pf7" path="res://Assets/Audio/monster.mp3" id="6_c2gye"]
+[ext_resource type="AudioStream" uid="uid://yfosmipdymfu" path="res://Assets/Audio/eating.wav" id="8_ctuuw"]
 
 [node name="AudioController" type="Node"]
 
