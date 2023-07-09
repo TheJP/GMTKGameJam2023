@@ -19,14 +19,14 @@ func _on_entity_health_changed(health, new_health):
 
 func _on_direction_timer_timeout():
 	var dir =  global_position.direction_to(player.global_position)
-	
+
 	if(bravery < PlayerStats.scariness):
 		scared = true
 		$Sprite2D.set_texture(scaredSprite)
 	if(bravery >= PlayerStats.scariness):
 		scared = false
 		$Sprite2D.set_texture(angrySprite)
-	
+
 	if(scared):
 		dir *= -1
 	velocity = dir * 100

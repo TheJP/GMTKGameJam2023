@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
 [ext_resource type="PackedScene" uid="uid://budb2o2mjur23" path="res://buildings/rock.tscn" id="5_dxae0"]
 [ext_resource type="PackedScene" uid="uid://cqusg6kdpbn7f" path="res://Tree/Tree.tscn" id="5_vrgku"]
-[ext_resource type="PackedScene" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
+[ext_resource type="PackedScene" uid="uid://kqq2yecbxusl" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
 [ext_resource type="PackedScene" uid="uid://uj2b1uonlnlu" path="res://UIElements/game_ui.tscn" id="8_33vkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0nvb"]
@@ -1043,6 +1043,7 @@ layer = 4
 process_mode = 3
 
 [node name="Timer" type="Timer" parent="UICanvasLayer/Downgrades"]
+process_mode = 1
 wait_time = 30.0
 one_shot = true
 autostart = true

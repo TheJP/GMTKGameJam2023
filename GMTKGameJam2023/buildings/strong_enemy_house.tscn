@@ -1,18 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://kqq2yecbxusl"]
+[gd_scene load_steps=10 format=3 uid="uid://kqq2yecbxusl"]
 
-[ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_24rsd"]
-[ext_resource type="Texture2D" uid="uid://c1qiy258wyoj2" path="res://Assets/Buildings/Enemy_House 2.png" id="2_7hvu7"]
+[ext_resource type="Script" path="res://buildings/enemy_house.gd" id="1_qmtux"]
+[ext_resource type="Texture2D" uid="uid://jhpoobano5wt" path="res://Assets/Buildings/Enemy_House_B 1.png" id="2_br05t"]
 [ext_resource type="Script" path="res://buildings/EnemySpawner.gd" id="3_7s01p"]
+[ext_resource type="Texture2D" uid="uid://esmao4ifhr0l" path="res://Assets/Buildings/Enemy_House_B 2.png" id="3_pic8i"]
 [ext_resource type="PackedScene" uid="uid://cacyrugu5utlx" path="res://Enemy/strong_enemy.tscn" id="4_enmwo"]
+[ext_resource type="Texture2D" uid="uid://cibs13pftggg7" path="res://Assets/Buildings/Enemy_House_Debris.png" id="6_hbp44"]
+[ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="7_4cmtu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdjwn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_24rsd")
+"texture": ExtResource("2_br05t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_7hvu7")
+"texture": ExtResource("3_pic8i")
 }],
 "loop": true,
 "name": &"default",
@@ -23,15 +26,14 @@ animations = [{
 radius = 63.0
 height = 166.0
 
-[node name="EnemyHouse" type="StaticBody2D"]
+[node name="EnemyHouse" type="StaticBody2D" groups=["enemy"]]
 position = Vector2(1, -137)
+script = ExtResource("1_qmtux")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 0.435294, 1, 1)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_wdjwn")
 autoplay = "default"
-frame_progress = 0.624472
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 86)
@@ -46,4 +48,14 @@ enemy = ExtResource("4_enmwo")
 wait_time = 30.0
 autostart = true
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 22)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_hbp44")
+
+[node name="Entity" parent="." instance=ExtResource("7_4cmtu")]
+health = 1000
+
 [connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_spawn_timer_timeout"]
+[connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]

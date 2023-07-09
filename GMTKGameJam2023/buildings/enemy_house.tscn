@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtu8lvf1koj2h"]
+[gd_scene load_steps=10 format=3 uid="uid://dtu8lvf1koj2h"]
 
 [ext_resource type="Texture2D" uid="uid://dji608i0imv56" path="res://Assets/Buildings/Enemy_House 1.png" id="1_6qbcd"]
+[ext_resource type="Script" path="res://buildings/enemy_house.gd" id="1_u5s74"]
 [ext_resource type="Texture2D" uid="uid://c1qiy258wyoj2" path="res://Assets/Buildings/Enemy_House 2.png" id="2_qwsvr"]
 [ext_resource type="Script" path="res://buildings/EnemySpawner.gd" id="3_65bvr"]
 [ext_resource type="PackedScene" uid="uid://dugyay08um7n5" path="res://Enemy/enemy.tscn" id="4_pyr8o"]
+[ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="5_lsb00"]
+[ext_resource type="Texture2D" uid="uid://cibs13pftggg7" path="res://Assets/Buildings/Enemy_House_Debris.png" id="7_glp65"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdjwn"]
 animations = [{
@@ -23,8 +26,9 @@ animations = [{
 radius = 63.0
 height = 166.0
 
-[node name="EnemyHouse" type="StaticBody2D"]
+[node name="EnemyHouse" type="StaticBody2D" groups=["enemy"]]
 position = Vector2(1, -137)
+script = ExtResource("1_u5s74")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
@@ -45,4 +49,13 @@ enemy = ExtResource("4_pyr8o")
 wait_time = 15.0
 autostart = true
 
+[node name="Entity" parent="." instance=ExtResource("5_lsb00")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2, 51)
+scale = Vector2(0.15, 0.2)
+texture = ExtResource("7_glp65")
+
 [connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_spawn_timer_timeout"]
+[connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]
