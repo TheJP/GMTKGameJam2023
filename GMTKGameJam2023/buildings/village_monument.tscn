@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://qok3cvcdo1r7"]
+
+[ext_resource type="Texture2D" uid="uid://bs48bis5o3tr1" path="res://Assets/Buildings/Village_Monument.png" id="1_614r0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8wsb"]
+radius = 43.0
+height = 504.0
+
+[node name="VillageMonument" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, -107)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_614r0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 28)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_c8wsb")

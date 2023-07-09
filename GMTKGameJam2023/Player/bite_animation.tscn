@@ -39,7 +39,7 @@ sprite_frames = SubResource("SpriteFrames_dyhx0")
 autoplay = "default"
 frame_progress = 0.324321
 
-[node name="Bite 1" type="CPUParticles2D" parent="AnimatedSprite2D"]
+[node name="Bite1" type="CPUParticles2D" parent="AnimatedSprite2D"]
 z_index = -1
 material = SubResource("CanvasItemMaterial_q4dmd")
 position = Vector2(350, 150)
@@ -62,7 +62,7 @@ scale_amount_max = 0.2
 scale_amount_curve = SubResource("Curve_i6bac")
 color_initial_ramp = SubResource("Gradient_gbhkc")
 
-[node name="Bite 2" type="CPUParticles2D" parent="AnimatedSprite2D"]
+[node name="Bite2" type="CPUParticles2D" parent="AnimatedSprite2D"]
 z_index = -1
 material = SubResource("CanvasItemMaterial_q4dmd")
 position = Vector2(-350, 150)
