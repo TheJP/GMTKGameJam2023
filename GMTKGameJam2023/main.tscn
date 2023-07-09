@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtu8lvf1koj2h" path="res://buildings/enemy_house.tscn" id="5_d3thm"]
 [ext_resource type="PackedScene" uid="uid://budb2o2mjur23" path="res://buildings/rock.tscn" id="5_dxae0"]
 [ext_resource type="PackedScene" uid="uid://cqusg6kdpbn7f" path="res://Tree/Tree.tscn" id="5_vrgku"]
-[ext_resource type="PackedScene" uid="uid://kqq2yecbxusl" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
+[ext_resource type="PackedScene" path="res://buildings/strong_enemy_house.tscn" id="5_w385k"]
 [ext_resource type="PackedScene" uid="uid://uj2b1uonlnlu" path="res://UIElements/game_ui.tscn" id="8_33vkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0nvb"]
@@ -50,58 +50,70 @@ position = Vector2(839, 829)
 position = Vector2(-372, 245)
 
 [node name="EnemyHouse3" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(1643, -717)
+position = Vector2(1599, -1257)
 
 [node name="EnemyHouse4" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(1510, -813)
+position = Vector2(1466, -1353)
 
 [node name="EnemyHouse5" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(-904, -354)
+position = Vector2(-2216, 679)
 
 [node name="EnemyHouse6" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(-980, 947)
+position = Vector2(2286, -2296)
 
 [node name="EnemyHouse7" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(-1640, 381)
+position = Vector2(-1789, 548)
 
 [node name="EnemyHouse8" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(-1802, -836)
+position = Vector2(-1896, 556)
 
 [node name="EnemyHouse9" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(-2089, 1580)
+position = Vector2(1602, -2491)
 
 [node name="EnemyHouse10" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
 position = Vector2(-1074, 2249)
 
 [node name="EnemyHouse11" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(430, 1903)
+position = Vector2(-2570, -608)
 
 [node name="EnemyHouse12" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(1683, 2419)
+position = Vector2(271, 2556)
 
 [node name="EnemyHouse13" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(2653, 1436)
+position = Vector2(3080, 603)
 
 [node name="EnemyHouse14" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(3147, 296)
+position = Vector2(2420, -1282)
 
 [node name="EnemyHouse15" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(2893, -1355)
+position = Vector2(1816, -2213)
 
 [node name="EnemyHouse16" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(1287, -1977)
+position = Vector2(-1215, -1317)
 
 [node name="EnemyHouse17" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
-position = Vector2(-91, -1729)
+position = Vector2(682, -1861)
 
 [node name="EnemyHouse18" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_d3thm")]
 position = Vector2(2208, -2)
 
 [node name="EnemyHouse19" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
-position = Vector2(511, -796)
+position = Vector2(1146, -764)
 
 [node name="EnemyHouse20" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
-position = Vector2(231, 1091)
+position = Vector2(1055, -2014)
+
+[node name="EnemyHouse21" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
+position = Vector2(2241, -1856)
+
+[node name="EnemyHouse22" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
+position = Vector2(-2105, 386)
+
+[node name="EnemyHouse24" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
+position = Vector2(-1397, -2461)
+
+[node name="EnemyHouse23" parent="GameCanvasLayer/YSortNode/Buildings" instance=ExtResource("5_w385k")]
+position = Vector2(2077, -2370)
 
 [node name="Enemies" type="Node2D" parent="GameCanvasLayer/YSortNode"]
 y_sort_enabled = true
@@ -223,6 +235,15 @@ position = Vector2(-144, -2291)
 
 [node name="Tree5" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup4" instance=ExtResource("5_vrgku")]
 position = Vector2(-311, -2081)
+
+[node name="Tree11" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup4" instance=ExtResource("5_vrgku")]
+position = Vector2(-2717, -1739)
+
+[node name="Tree12" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup4" instance=ExtResource("5_vrgku")]
+position = Vector2(-3501, -2111)
+
+[node name="Tree13" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup4" instance=ExtResource("5_vrgku")]
+position = Vector2(-3221, -2224)
 
 [node name="Tree6" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup4" instance=ExtResource("5_vrgku")]
 position = Vector2(-401, -2432)
@@ -405,7 +426,10 @@ position = Vector2(139, -2350)
 position = Vector2(312, -2177)
 
 [node name="Tree3" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup10" instance=ExtResource("5_vrgku")]
-position = Vector2(60, -1985)
+position = Vector2(131, -1892)
+
+[node name="Tree10" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup10" instance=ExtResource("5_vrgku")]
+position = Vector2(5, -2089)
 
 [node name="Tree4" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup10" instance=ExtResource("5_vrgku")]
 position = Vector2(-144, -2291)
@@ -469,6 +493,15 @@ position = Vector2(-118, -3059)
 [node name="Tree11" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(-319, -3446)
 
+[node name="Tree20" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-176, -3315)
+
+[node name="Tree21" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-515, -3703)
+
+[node name="Tree22" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-70, -3710)
+
 [node name="Tree13" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(-14, -3346)
 
@@ -481,6 +514,9 @@ position = Vector2(-624, -3333)
 [node name="Tree15" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(-861, -3158)
 
+[node name="Tree23" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(422, -4109)
+
 [node name="Tree16" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(-915, -3407)
 
@@ -491,16 +527,25 @@ position = Vector2(312, -2177)
 position = Vector2(60, -1985)
 
 [node name="Tree4" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
-position = Vector2(-144, -2291)
+position = Vector2(-116, -2247)
 
 [node name="Tree5" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
-position = Vector2(-311, -2081)
+position = Vector2(-353, -2060)
 
 [node name="Tree6" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
-position = Vector2(-401, -2432)
+position = Vector2(-346, -2394)
 
 [node name="Tree7" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
-position = Vector2(-25, -2676)
+position = Vector2(51, -2636)
+
+[node name="Tree17" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-172, -2551)
+
+[node name="Tree18" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(126, -3052)
+
+[node name="Tree19" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
+position = Vector2(-544, -2278)
 
 [node name="Tree8" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup12" instance=ExtResource("5_vrgku")]
 position = Vector2(365, -2636)
@@ -796,6 +841,9 @@ position = Vector2(365, -2636)
 [node name="Tree9" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup21" instance=ExtResource("5_vrgku")]
 position = Vector2(558, -2305)
 
+[node name="Tree11" parent="GameCanvasLayer/YSortNode/Obstacles/TreeGroup21" instance=ExtResource("5_vrgku")]
+position = Vector2(1948, -2000)
+
 [node name="TreeGroup22" type="Node2D" parent="GameCanvasLayer/YSortNode/Obstacles"]
 y_sort_enabled = true
 position = Vector2(-3854, 1747)
@@ -938,14 +986,20 @@ position = Vector2(-91, -174)
 [node name="Rock2" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(2074, -65)
 
+[node name="Rock33" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(2747, -958)
+
+[node name="Rock34" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(2944, -850)
+
 [node name="Rock3" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
-position = Vector2(1633, -861)
+position = Vector2(1589, -1401)
 
 [node name="Rock4" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(-789, -881)
 
 [node name="Rock5" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
-position = Vector2(-2145, 266)
+position = Vector2(-1749, 435)
 
 [node name="Rock19" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(-3174, 664)
@@ -973,6 +1027,9 @@ position = Vector2(4971, 1003)
 
 [node name="Rock27" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(3841, 2159)
+
+[node name="Rock35" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
+position = Vector2(4003, 2444)
 
 [node name="Rock28" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(3659, 9)
@@ -1005,7 +1062,7 @@ position = Vector2(-921, -972)
 position = Vector2(-1472, -1963)
 
 [node name="Rock11" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
-position = Vector2(2276, -2023)
+position = Vector2(2417, -1891)
 
 [node name="Rock12" parent="GameCanvasLayer/YSortNode/Rocks" instance=ExtResource("5_dxae0")]
 position = Vector2(3123, 1321)

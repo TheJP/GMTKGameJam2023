@@ -10,6 +10,7 @@ func _ready():
 func _on_entity_health_changed(old_health, new_health):
 	if(new_health > PlayerStats.max_health):
 		$Entity.health = PlayerStats.max_health
+		return
 
 	if(new_health < old_health && new_health != PlayerStats.max_health):
 		$AnimationPlayer.play("on_damage_taken")
