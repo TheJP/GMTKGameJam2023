@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://uj2b1uonlnlu"]
+[gd_scene load_steps=12 format=3 uid="uid://uj2b1uonlnlu"]
 
 [ext_resource type="Script" path="res://UIElements/game_ui.gd" id="1_l580y"]
 [ext_resource type="Texture2D" uid="uid://b5ignygeyqu3v" path="res://Assets/MonsterLair/Cave.png" id="2_1e8fu"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bn4odnkmfb0rs" path="res://Assets/ArrowRight.png" id="4_js84n"]
 [ext_resource type="Texture2D" uid="uid://cenb4ruamsiqf" path="res://Assets/Frame.png" id="5_r61rx"]
 [ext_resource type="Script" path="res://UIElements/form_chaned_popup.gd" id="5_yndj3"]
-[ext_resource type="FontFile" uid="uid://b6ivishkxit4u" path="res://Assets/FrederickatheGreat-Regular.ttf" id="7_p477g"]
+[ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="7_p477g"]
+[ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="8_50mwb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d36jj"]
 bg_color = Color(0, 0, 0, 0.490196)
@@ -147,10 +148,13 @@ text = "Full Moon"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Ohhh nooo... you lost track of time and now it's full moon. As a werbaby you slowly transform into your baby form and loose your powers.
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.396078, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_50mwb")
+theme_override_font_sizes/font_size = 40
+text = "Ohhh nooo... you lost track of time and now it's full moon. As a Werebaby you'll slowly transform into your baby form and will loose your powers.
 
-Go back to your monster lair before the villagers get you!"
+Go back to your lair before you become too weak. But a few more kills should be possible...."
 autowrap_mode = 3
 
 [node name="FormChangedPopUpCloseButton" type="Button" parent="FormChangedPopUp/TextureRect/GridContainer"]
