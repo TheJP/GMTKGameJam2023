@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cyiqrtd5vtqcq"]
 
-[ext_resource type="FontFile" uid="uid://b6ivishkxit4u" path="res://Assets/FrederickatheGreat-Regular.ttf" id="1_tiu2r"]
+[ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="1_tiu2r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_276fo"]
 content_margin_left = 100.0

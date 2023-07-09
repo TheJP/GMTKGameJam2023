@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4pcbslkckvyv"]
+[gd_scene load_steps=15 format=3 uid="uid://c4pcbslkckvyv"]
 
 [ext_resource type="Script" path="res://UIElements/titleScreen.gd" id="1_wecwy"]
-[ext_resource type="FontFile" uid="uid://b6ivishkxit4u" path="res://Assets/FrederickatheGreat-Regular.ttf" id="2_643i1"]
-[ext_resource type="FontFile" uid="uid://dlc75aa3kulfl" path="res://Assets/NanumPenScript-Regular.ttf" id="3_m8m44"]
+[ext_resource type="FontFile" uid="uid://bb71ypywdmmve" path="res://Assets/FrederickatheGreat-Regular.ttf" id="2_643i1"]
+[ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="3_m8m44"]
 [ext_resource type="Texture2D" uid="uid://berxnscxlhclo" path="res://Assets/Background2.png" id="4_6tx0o"]
 [ext_resource type="Texture2D" uid="uid://yvcwa8q18ftf" path="res://Assets/Background.png" id="4_a3fhw"]
 [ext_resource type="Texture2D" uid="uid://csj60sh8eqk5y" path="res://Assets/Player/Character 3.png" id="6_l71vm"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://8pixapcbc44" path="res://Assets/Particles/particle_1.png" id="8_uwnok"]
 [ext_resource type="Texture2D" uid="uid://70c8a4g153f0" path="res://Assets/Particles/particle_2.png" id="9_jy6v6"]
 [ext_resource type="Texture2D" uid="uid://cjc653ohvqmj2" path="res://Assets/Particles/particle_5.png" id="10_xctby"]
+[ext_resource type="AudioStream" uid="uid://by06rhb7v5g4p" path="res://Assets/Audio/thunder.wav" id="11_k2642"]
 
 [sub_resource type="Animation" id="Animation_mggqa"]
 length = 0.001
@@ -96,6 +97,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1801, 1120)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_vyoe8"]
@@ -185,6 +198,29 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1500, 1120), Vector2(1900, 1120)]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/7/use_blend = true
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AudioStreamPlayer:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(3.5, 8.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_it72x"]
@@ -313,6 +349,9 @@ position = Vector2(1838, 522)
 rotation = 3.59828
 scale = Vector2(0.89, 0.89)
 texture = ExtResource("8_uwnok")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_k2642")
 
 [connection signal="pressed" from="UI Box/CenterContainer/VBoxContainer/MarginContainer/VBoxContainer/Start Game Button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="UI Box/CenterContainer/VBoxContainer/MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

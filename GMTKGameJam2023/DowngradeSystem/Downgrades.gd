@@ -32,11 +32,13 @@ func _on_downgrade_selected():
 	num_downgrades += 1
 	if(num_downgrades == 3):
 		PlayerStats.monster_form = PlayerStats.MonsterForm.HALF_MONSTER
+		AudioController.get_node("becoming_smaller").play()
 		%Player/Sprite2D.set_texture(halfSprite)
 		PlayerStats.scariness -= 5
 		PlayerStats.update_player_stats()
 	if(num_downgrades == 6):
 		PlayerStats.monster_form = PlayerStats.MonsterForm.BABY
+		AudioController.get_node("becoming_smaller").play()
 		%Player/Sprite2D.set_texture(babySpirte)
 		PlayerStats.scariness = 0
 		PlayerStats.update_player_stats()
@@ -47,6 +49,7 @@ func _on_downgrade_selected():
 
 func _on_timer_timeout():
 	get_tree().paused = true
+	AudioController.get_node("cards").play()
 	visible = true
 	for i in range(3):
 		var card = cards[Random.randi_range(0, cards.size()-1)].instantiate()

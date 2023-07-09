@@ -8,6 +8,7 @@ func _ready():
 
 func _on_gui_input(event):
 	if Input.is_action_pressed("select_downgrade"):
+		AudioController.get_node("click").play()
 		$Effect.apply_downgrade()
 		emit_signal("downgrade_selected")
 

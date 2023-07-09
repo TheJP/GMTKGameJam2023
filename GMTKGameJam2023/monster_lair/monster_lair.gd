@@ -6,9 +6,11 @@ func _on_entry_area_2d_body_entered(body: PhysicsBody2D):
 		$AcceptDialog.show()
 
 func _on_accept_dialog_canceled():
+	AudioController.get_node("click").play()
 	get_tree().paused = false
 
 func _on_accept_dialog_confirmed():
+	AudioController.get_node("click").play()
 	GameState.game_over(false)
 	get_tree().paused = false
 
