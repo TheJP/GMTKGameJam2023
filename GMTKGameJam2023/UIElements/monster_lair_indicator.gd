@@ -5,8 +5,11 @@ const INDICATOR_SIZE = Vector2(100, 150)
 
 func _process(delta):
 	var is_on_screen: bool = owner.monster_lair.is_on_screen()
-	visible = not is_on_screen
-	if is_on_screen:
+	var is_monster: bool = PlayerStats.monster_form == PlayerStats.MonsterForm.MONSTER
+	var show_indicaror: bool = not is_on_screen and not is_monster
+
+	visible = show_indicaror
+	if show_indicaror:
 		return
 
 	var player: Vector2 = owner.player.global_position

@@ -12,6 +12,9 @@ extends Node
 @export var max_health = 100
 @export var health_gain_per_corpse = 10
 
+enum MonsterForm { MONSTER, HALF_MONSTER, BABY }
+@export var monster_form: MonsterForm = MonsterForm.MONSTER
+
 func update_player_stats():
 	$"../Game/GameCanvasLayer/YSortNode/Player".speed = movement_speed
 	$"../Game/GameCanvasLayer/YSortNode/Player/AttackClaws".damage = claw_damage
