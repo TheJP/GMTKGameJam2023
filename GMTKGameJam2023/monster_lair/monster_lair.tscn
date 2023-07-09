@@ -30,6 +30,10 @@ position = Vector2(-21, 72)
 shape = SubResource("CircleShape2D_6jm2f")
 debug_color = Color(0, 0.647059, 0.219608, 0.419608)
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-4, 10)
+scale = Vector2(17.05, 13.4125)
+
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
 process_mode = 3
 title = "Enter Lair?!"
