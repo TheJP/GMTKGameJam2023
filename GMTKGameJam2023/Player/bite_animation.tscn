@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bx5qwn1tqjj3v"]
 
 [ext_resource type="Texture2D" uid="uid://w7b773bdlnws" path="res://Assets/Player/Bite 1.png" id="1_b48kj"]
-[ext_resource type="Script" path="res://player/bite_animation.gd" id="1_swc7b"]
+[ext_resource type="Script" path="res://Player/bite_animation.gd" id="1_swc7b"]
 [ext_resource type="Texture2D" uid="uid://du4ipykq4gyix" path="res://Assets/Player/Bite 2.png" id="2_k0son"]
 [ext_resource type="Texture2D" uid="uid://8pixapcbc44" path="res://Assets/Particles/particle_1.png" id="4_qy4od"]
 
