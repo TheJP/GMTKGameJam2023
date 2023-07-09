@@ -36,6 +36,15 @@ func _physics_process(_delta):
 
 	velocity = move.normalized() * speed
 	move_and_slide()
+	if move == Vector2.ZERO:
+		$Sprite2D.pause()
+	elif not $Sprite2D.is_playing():
+		if PlayerStats.monster_form == PlayerStats.MonsterForm.MONSTER:
+			$Sprite2D.play("character1")
+		if PlayerStats.monster_form == PlayerStats.MonsterForm.HALF_MONSTER:
+			$Sprite2D.play("character2")
+		if PlayerStats.monster_form == PlayerStats.MonsterForm.BABY:
+			$Sprite2D.play("character3")
 
 func _process(delta):
 	if $Entity.health > 0:

@@ -33,13 +33,13 @@ func _on_downgrade_selected():
 	if(num_downgrades == 3):
 		PlayerStats.monster_form = PlayerStats.MonsterForm.HALF_MONSTER
 		AudioController.get_node("becoming_smaller").play()
-		%Player/Sprite2D.set_texture(halfSprite)
+		%Player/Sprite2D.play("character2")
 		PlayerStats.scariness -= 5
 		PlayerStats.update_player_stats()
 	if(num_downgrades == 6):
 		PlayerStats.monster_form = PlayerStats.MonsterForm.BABY
 		AudioController.get_node("becoming_smaller").play()
-		%Player/Sprite2D.set_texture(babySpirte)
+		%Player/Sprite2D.play("character3")
 		PlayerStats.scariness = 0
 		PlayerStats.update_player_stats()
 	emit_signal("downgrade_selection_finished")
