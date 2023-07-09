@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://DowngradeSystem/DowngradeCard.gd" id="2_enrp3"]
 [ext_resource type="FontFile" uid="uid://cmlwue6seucic" path="res://Assets/NanumPenScript-Regular.ttf" id="3_vpnpj"]
 
-[node name="Downgrade" type="NinePatchRect"]
+[node name="Downgrade3" type="NinePatchRect"]
 custom_minimum_size = Vector2(100, 100)
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,11 +44,10 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.388235, 0, 0.0705882, 1)
 theme_override_fonts/font = ExtResource("3_vpnpj")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 60
 text = "
 "
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

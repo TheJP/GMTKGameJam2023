@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cspb3vj40bncf" path="res://DowngradeSystem/DowngradeCard.tscn" id="1_l8ihy"]
 [ext_resource type="Script" path="res://DowngradeSystem/Cards/ReduceBiteSpeed.gd" id="2_p8775"]
 
-[node name="Downgrade" instance=ExtResource("1_l8ihy")]
+[node name="Downgrade2" instance=ExtResource("1_l8ihy")]
 
 [node name="Effect" parent="." index="0"]
 script = ExtResource("2_p8775")
