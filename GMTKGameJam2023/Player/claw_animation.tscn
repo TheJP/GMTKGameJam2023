@@ -60,7 +60,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/Blood 1:modulate")
+tracks/4/path = NodePath("Sprite2D/Blood1:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -72,7 +72,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D/Blood 2:modulate")
+tracks/5/path = NodePath("Sprite2D/Blood2:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -84,7 +84,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Sprite2D/Blood 3:modulate")
+tracks/6/path = NodePath("Sprite2D/Blood3:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -124,7 +124,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/Blood 1:modulate")
+tracks/2/path = NodePath("Sprite2D/Blood1:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -136,7 +136,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/Blood 2:modulate")
+tracks/3/path = NodePath("Sprite2D/Blood2:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -148,7 +148,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/Blood 3:modulate")
+tracks/4/path = NodePath("Sprite2D/Blood3:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -219,7 +219,7 @@ centered = false
 offset = Vector2(-446, -446)
 vframes = 10
 
-[node name="Blood 1" type="CPUParticles2D" parent="Sprite2D"]
+[node name="Blood1" type="CPUParticles2D" parent="Sprite2D"]
 modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = SubResource("CanvasItemMaterial_jansp")
@@ -242,7 +242,7 @@ scale_amount_max = 1.6
 scale_amount_curve = SubResource("Curve_3v6a4")
 color_initial_ramp = SubResource("Gradient_bthdm")
 
-[node name="Blood 2" type="CPUParticles2D" parent="Sprite2D"]
+[node name="Blood2" type="CPUParticles2D" parent="Sprite2D"]
 modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = SubResource("CanvasItemMaterial_jansp")
@@ -265,7 +265,7 @@ scale_amount_curve = SubResource("Curve_3v6a4")
 color = Color(1, 1, 1, 0.337255)
 color_initial_ramp = SubResource("Gradient_bthdm")
 
-[node name="Blood 3" type="CPUParticles2D" parent="Sprite2D"]
+[node name="Blood3" type="CPUParticles2D" parent="Sprite2D"]
 modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = SubResource("CanvasItemMaterial_jansp")

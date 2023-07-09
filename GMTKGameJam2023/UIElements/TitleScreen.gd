@@ -1,6 +1,6 @@
 extends Control
 
-@onready var start_game_button = %"Start Game Button"
+@onready var start_game_button = %"StartGameButton"
 
 func _ready():
 	start_game_button.grab_focus()
