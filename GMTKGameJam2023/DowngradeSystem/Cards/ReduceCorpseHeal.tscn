@@ -9,5 +9,4 @@
 script = ExtResource("3_bhaxp")
 
 [node name="Label" parent="MarginContainer" index="0"]
-text = "
-Reduce Healing from Corpses"
+text = "Reduce Healing from Corpses"
