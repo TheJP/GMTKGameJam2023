@@ -26,10 +26,6 @@ func _on_start_game_button_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file(\"res://main.tscn\")
 	TransitionScreen.fade_to_normal()
-
-func _process(delta):
-	if Input.is_action_pressed(\"start\"):
-		_on_start_game_button_pressed()
 "
 
 [sub_resource type="Animation" id="Animation_mggqa"]
