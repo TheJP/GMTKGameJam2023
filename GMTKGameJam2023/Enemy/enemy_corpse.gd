@@ -10,12 +10,11 @@ func _ready():
 	connect("corpse_eaten", player._on_corpse_eaten)
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	$AnimationPlayer.play("RESET")
 	$CPUParticles2D.visible = false
 	$CPUParticles2D.emitting = false
 	corpse_eaten.emit()
-	modulate = Color.WHITE
 	texture = eaten_texture
 	$Area2D.set_deferred("monitorable", false)
 	$Area2D.set_deferred("monitoring", false)
