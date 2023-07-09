@@ -15,7 +15,9 @@ func _on_area_2d_body_entered(body):
 	$CPUParticles2D.visible = false
 	$CPUParticles2D.emitting = false
 	corpse_eaten.emit()
+	modulate = Color.WHITE
 	texture = eaten_texture
 	$Area2D.set_deferred("monitorable", false)
 	$Area2D.set_deferred("monitoring", false)
-	
+	$Container.queue_free()
+
