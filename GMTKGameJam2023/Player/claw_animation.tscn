@@ -57,18 +57,54 @@ tracks/3/keys = {
 "update": 1,
 "values": [8]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/Blood 1:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D/Blood 2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D/Blood 3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_xl1gj"]
 resource_name = "claw_attack_fade_in"
-length = 0.2
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.04, 0.14, 0.2),
+"times": PackedFloat32Array(0, 0.04, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -80,15 +116,51 @@ tracks/1/path = NodePath("Sprite2D:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.02, 0.06, 0.1, 0.14, 0.18),
+"times": PackedFloat32Array(0, 0.02, 0.06, 0.1, 0.16, 0.24),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [10, 9, 4, 3, 2, 1]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Blood 1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Blood 2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/Blood 3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_vf2i4"]
 resource_name = "fist_anim"
-length = 0.28
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -96,10 +168,10 @@ tracks/0/path = NodePath("Fist:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.36, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -149,6 +221,7 @@ offset = Vector2(-446, -446)
 vframes = 10
 
 [node name="Blood 1" type="CPUParticles2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = SubResource("CanvasItemMaterial_jansp")
 scale = Vector2(6.66667, 6.66667)
@@ -171,6 +244,7 @@ scale_amount_curve = SubResource("Curve_3v6a4")
 color_initial_ramp = SubResource("Gradient_bthdm")
 
 [node name="Blood 2" type="CPUParticles2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = SubResource("CanvasItemMaterial_jansp")
 scale = Vector2(6.66667, 6.66667)
@@ -193,6 +267,7 @@ color = Color(1, 1, 1, 0.337255)
 color_initial_ramp = SubResource("Gradient_bthdm")
 
 [node name="Blood 3" type="CPUParticles2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 material = SubResource("CanvasItemMaterial_jansp")
 scale = Vector2(6.66667, 6.66667)
