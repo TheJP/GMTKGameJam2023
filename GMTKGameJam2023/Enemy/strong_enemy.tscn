@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cacyrugu5utlx"]
+[gd_scene load_steps=11 format=3 uid="uid://cacyrugu5utlx"]
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_ypgh5"]
 [ext_resource type="PackedScene" uid="uid://c35lb4hpkomqd" path="res://entity/entity.tscn" id="2_coy4y"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cuiv0xc0vlbr7" path="res://Enemy/attack_enemy.tscn" id="4_cc841"]
 [ext_resource type="Script" path="res://Enemy/spawn_corpse.gd" id="5_gyrmh"]
 [ext_resource type="Texture2D" uid="uid://dgo2x8arrmard" path="res://Assets/Enemy/Hat_B.png" id="6_8qv6j"]
+[ext_resource type="PackedScene" uid="uid://h3l61xdm6rc" path="res://Enemy/projectile_spawner.tscn" id="6_ihk3v"]
+[ext_resource type="PackedScene" uid="uid://skjbjh11868m" path="res://Enemy/spellProjectile.tscn" id="7_24hrr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqael"]
 radius = 36.0
@@ -38,6 +40,9 @@ shape = SubResource("CapsuleShape2D_gqael")
 [node name="AttackEnemy" parent="." instance=ExtResource("4_cc841")]
 damage = 10
 
+[node name="ProjectileSpawner" parent="AttackEnemy" instance=ExtResource("6_ihk3v")]
+projectileRessource = ExtResource("7_24hrr")
+
 [node name="DeathBehaviour" type="Node" parent="."]
 script = ExtResource("5_gyrmh")
 corpse_texture = ExtResource("3_lqpaa")
@@ -48,4 +53,5 @@ wait_time = 0.5
 autostart = true
 
 [connection signal="health_changed" from="Entity" to="." method="_on_entity_health_changed"]
+[connection signal="damage_target" from="AttackEnemy" to="AttackEnemy/ProjectileSpawner" method="_on_attack_enemy_damage_target"]
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]

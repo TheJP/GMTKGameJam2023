@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://skjbjh11868m"]
+
+[ext_resource type="Texture2D" uid="uid://bnislviy7oe53" path="res://Assets/Enemy/Spell.png" id="1_o1bwm"]
+[ext_resource type="Script" path="res://Enemy/Projectile.gd" id="2_0wtvw"]
+
+[node name="Projectile" type="Sprite2D"]
+z_index = 10
+z_as_relative = false
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_o1bwm")
+script = ExtResource("2_0wtvw")
